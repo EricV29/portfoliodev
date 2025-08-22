@@ -1,7 +1,25 @@
 ---
+import Csharp from "../components/icons/Csharp.astro";
+import Css from "../components/icons/Css.astro";
+import Devexpress from "../components/icons/Devexpress.astro";
+import Docker from "../components/icons/Docker.astro";
+import Electron from "../components/icons/Electron.astro";
+import Git from "../components/icons/Git.astro";
 import Github from "../components/icons/Github.astro";
 import Gmail from "../components/icons/Gmail.astro";
+import Html from "../components/icons/Html.astro";
+import Js from "../components/icons/Js.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
+import Mysql from "../components/icons/Mysql.astro";
+import Nodejs from "../components/icons/Nodejs.astro";
+import Playwright from "../components/icons/Playwright.astro";
+import Postgresql from "../components/icons/Postgresql.astro";
+import Python from "../components/icons/Python.astro";
+import React from "../components/icons/React.astro";
+import Sqlserver from "../components/icons/Sqlserver.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import Typescript from "../components/icons/Typescript.astro";
+import Unity from "../components/icons/Unity.astro";
 import Layout from "../layouts/Layout.astro";
 
 const descriptions = [
@@ -252,6 +270,155 @@ const descriptions = [
               <span class="text-[#1DFF52]">DigitalOcean</span>.
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stacktec" class="w-full space-y-10">
+      <div
+        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+      >
+        <img src="./imgStackTec.webp" alt="imgStackTec" class="absolute z-0" />
+        <p class="z-1">
+          Mi <span class="text-[#1DFF52]">stack</span> tecnológico incluye:
+        </p>
+      </div>
+
+      <div
+        class="w-full h-auto px-5 flex flex-wrap justify-center md:gap-5 gap-3"
+      >
+        <div
+          class="w-auto md:min-h-45 h-auto bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Front-End</p>
+          <div
+            class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
+          >
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Html class="md:w-13 w-5" />
+              <p>HTML</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Css class="md:w-13 w-5" />
+              <p>CSS</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Js class="md:w-13 w-5" />
+              <p>JavaScript</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Typescript class="md:w-13 w-5" />
+              <p>TypeScript</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <React class="md:w-13 w-5" />
+              <p>ReactJS</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Electron class="md:w-13 w-5" />
+              <p>Electron</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Tailwind class="md:w-13 w-5" />
+              <p>Tailwind</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Devexpress class="md:w-13 w-5" />
+              <p>DevExpress</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Back-End</p>
+          <div
+            class="w-auto flex flex-wrap gap-7 md:justify-start justify-center items-end"
+          >
+            <div
+              class="flex flex-col justify-center items-center w-auto text-center"
+            >
+              <Nodejs class="md:w-13 w-5" />
+              <p>NodeJS</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Csharp class="md:w-13 w-5" />
+              <p>CSharp</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Bases de Datos</p>
+          <div
+            class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
+          >
+            <div class="flex flex-col items-center text-center w-auto">
+              <Mysql class="md:w-13 w-5" />
+              <p>MySQL</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Sqlserver class="md:w-13 w-5" />
+              <p>SQL Server</p>
+            </div>
+            <div class="flex flex-col justify-center items-center w-auto">
+              <Postgresql class="md:w-13 w-5" />
+              <p>PostgreSQL</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Test</p>
+          <div
+            class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
+          >
+            <div class="flex flex-col items-center text-center w-auto">
+              <Playwright class="md:w-13 w-5" />
+              <p>Playwright</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Herramientas</p>
+          <div
+            class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
+          >
+            <div class="flex flex-col items-center w-auto text-center">
+              <Git class="md:w-13 w-5" />
+              <p>Git</p>
+            </div>
+            <div class="flex flex-col items-center w-auto text-center">
+              <Unity class="md:w-13 w-5" />
+              <p>Unity</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+        >
+          <p class="text-[#1DFF52]">Aprendiendo</p>
+          <div
+            class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
+          >
+            <div class="flex flex-col items-center w-auto text-center">
+              <Python class="md:w-13 w-5" />
+              <p>Python</p>
+            </div>
+            <div class="flex flex-col items-center w-auto text-center">
+              <Docker class="md:w-13 w-5" />
+              <p>Docker</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
