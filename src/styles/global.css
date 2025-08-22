@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.btns {
+    background-color: #222222;
+    border: 0.5px solid rgba(17, 17, 17, 0.27);
+    border-radius: 10px;
+    filter: blur(0.5px);
+    box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }

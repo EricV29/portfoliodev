@@ -1,0 +1,32 @@
+---
+import HomeIcon from "./icons/Home.astro";
+import CvIcon from "./icons/Cv.astro";
+---
+
+<header
+  class="fixed top-0 left-0 pl-[25px] pr-[25px] pt-[15px] pb-[15px] flex justify-between items-center w-full z-3 bg-[#1d1d1dbb] backdrop-blur-sm"
+>
+  <div class="flex flex-row gap-x-4 md:gap-x-6">
+    <a href="" class="flex justify-center items-center relative">
+      <div class="btns w-[40px] h-[40px] md:w-[55px] md:h-[55px]"></div>
+      <span class="absolute"><HomeIcon /></span>
+    </a>
+
+    <a href="" class="relative inline-flex justify-center items-center">
+      <div
+        class="btns flex items-center justify-center gap-2 h-[40px] md:h-[55px] px-3"
+      >
+        <CvIcon />
+        <span>Descargar CV</span>
+      </div>
+    </a>
+  </div>
+
+  <nav class="hidden md:flex flex-row gap-x-6">
+    <a href="">Sobre mí</a>
+    <a href="">Proyectos</a>
+    <a href="">Formación</a>
+  </nav>
+
+  <div class="md:hidden"></div>
+</header>

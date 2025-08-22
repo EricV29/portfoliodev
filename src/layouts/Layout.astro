@@ -1,22 +1,50 @@
+---
+import "@fontsource/belanosima/400.css";
+import "@fontsource/belanosima/600.css";
+import "@fontsource/belanosima/700.css";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+
+  <body>
+    <img src="/imgOpenWork.webp" alt="imagenOpenToWork" class="absolute md:w-140 w-90 md:-top-45 -top-10 md:translate-x-50 left-1/2 -translate-x-1/2 opacity-20 z-0">
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Belanosima", sans-serif;
+  }
+
+  body {
+    background-color: #1d1d1d;
+    justify-content: center;
+    min-height: 100vh;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
 </style>

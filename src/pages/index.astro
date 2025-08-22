@@ -1,11 +1,187 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Github from "../components/icons/Github.astro";
+import Gmail from "../components/icons/Gmail.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const descriptions = [
+  "Desarrollo de funcionalidades front-end",
+  "Mantenimiento de base de datos",
+  "Revisión de código",
+];
 ---
 
 <Layout>
-	<Welcome />
+  <main class="space-y-20">
+    <section id="presentation" class="w-full">
+      <div
+        class="w-full flex justify-between md:justify-center items-center md:gap-x-150"
+      >
+        <div class="flex flex-col font-semibold justify-center items-center">
+          <h1 class="md:text-5xl text-1xl">
+            Hola
+            <span class="text-[#1DFF52]">,</span> soy
+          </h1>
+          <h1 class="text-2xl md:text-7xl text-[#1DFF52]">Eric Villeda</h1>
+        </div>
+
+        <p class="text-1xl md:text-3xl">
+          lic. Ing. <span class="text-[#1DFF52]">Software</span>
+        </p>
+      </div>
+
+      <div class="w-full md:flex md:justify-between">
+        <div
+          class="w-full flex justify-center items-center md:space-x-2 space-x-1 pt-2 pb-2 md:p-0"
+        >
+          <p class="font-bold md:text-7xl text-1xl text-[#1DFF52]">1</p>
+          <div
+            class="md:text-4xl text-1xl md:flex-col flex space-x-1 md:space-x-0"
+          >
+            <p>AÑO DE</p>
+            <p>EXPERIENCIA</p>
+          </div>
+        </div>
+
+        <div class="w-full flex justify-center relative">
+          <div
+            class="absolute z-0 w-64 h-64 bg-[#1DFF52] rounded-full opacity-100 blur-[150px] top-30"
+          >
+          </div>
+          <img
+            src="/imgVector.webp"
+            alt="imagenVector"
+            class="absolute z-1 md:w-full w-[10rem] md:bottom-2"
+          />
+          <img
+            src="/imgEric.webp"
+            alt="imagenEric"
+            class="z-2 md:w-full w-[10rem]"
+          />
+        </div>
+
+        <div
+          class="w-full flex md:flex-col justify-center md:items-center md:space-y-4 space-x-5 md:space-x-0 pt-2 md:pt-0"
+        >
+          <div class="flex space-x-5">
+            <a href="" class="flex justify-center items-center relative">
+              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <span class="absolute md:w-9 w-5"><Linkedin /></span>
+            </a>
+            <a href="" class="flex justify-center items-center">
+              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <span class="absolute md:w-9 w-5"><Github /></span>
+            </a>
+          </div>
+          <a href="" class="flex justify-center items-center">
+            <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+            <span class="absolute md:w-9 w-5"><Gmail /></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutme" class="w-auto text-center md:text-3xl">
+      <p>
+        Hola, yo soy <span class="text-[#1DFF52]">Eric</span>, profesional y
+        egresado de la Licenciatura en Ingeniería de
+        <span class="hidden md:inline"><br /></span>
+        <span class="text-[#1DFF52]">Software</span>, cuento con capacidad para
+        el trabajo en
+        <span class="text-[#1DFF52]">equipo</span>, tengo un enfoque
+        <span class="hidden md:inline"><br /></span>
+        <span class="text-[#1DFF52]">creativo</span> para la resolución de problemas
+        y habilidad para
+        <span class="text-[#1DFF52]">gestionar</span> tareas <span
+          class="text-[#1DFF52]">bajo</span
+        >
+        <span class="hidden md:inline"><br /></span>
+        <span class="text-[#1DFF52]">presión</span>.
+      </p>
+    </section>
+
+    <section id="xp" class="w-full md:space-y-20 space-y-5">
+      <div
+        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+      >
+        <img src="./imgTxtXP.webp" alt="imgTxtXP" class="absolute z-0" />
+        <p class="z-1">
+          ¿<span class="text-[#1DFF52]">Experiencia</span>?
+        </p>
+      </div>
+
+      <div
+        class="w-full md:h-105 h-40 relative flex justify-center items-center"
+      >
+        <img src="./imgIDBadge.webp" alt="imgIDBadge" class="absolute z-0" />
+        <a
+          href=""
+          class="md:flex justify-center items-center absolute bottom-8 right-97 hidden"
+        >
+          <div class="btns md:w-[184px] md:h-[46px]"></div>
+          <p class="absolute text-[10px] md:text-2xl">Contactar</p>
+        </a>
+      </div>
+
+      <div
+        class="w-full md:flex justify-center items-center md:space-x-20 space-y-5"
+      >
+        <div class="w-auto flex flex-col justify-center items-center space-y-2">
+          <img src="./imgQrofive.webp" alt="imgCompany" class="md:w-50" />
+          <p class="md:text-3xl font-semibold">QROFIVE</p>
+          <div class="flex space-x-3">
+            <img
+              src="./imgCalendarW1S.webp"
+              alt="dateStart"
+              class="md:w-20 w-10"
+            />
+            <img
+              src="./imgCalendarW1E.webp"
+              alt="dateStart"
+              class="md:w-20 w-10"
+            />
+          </div>
+        </div>
+        <div
+          class="md:w-auto flex flex-col items-center md:items-start w-full text-center md:text-start"
+        >
+          <div
+            class="bg-[#1DFF52] text-[#000] md:w-150 w-50 p-2 md:rounded-r-[20px] rounded-[10px] md:text-3xl text-1xl font-semibold"
+          >
+            <p>Desarrollo Web (5SMART)</p>
+          </div>
+          <ul
+            class="md:pl-10 md:pt-5 pt-3 list-disc md:space-y-3 md:text-2xl text-[15px]"
+          >
+            <li>
+              Diseño y desarrollo de módulos web e interfaces dinámicas con
+              <span class="text-[#1DFF52]">C#</span>,
+              <span class="text-[#1DFF52]">.Net</span> y
+              <br class="hidden md:block" />
+              <span class="text-[#1DFF52]">JavaScript</span>, aplicando el
+              patrón
+              <span class="text-[#1DFF52]">Modelo-Vista-Controlador</span> (MVC)
+              y
+              <br class="hidden md:block" />
+              utilizando <span class="text-[#1DFF52]">DevExpress</span>.
+            </li>
+            <li>
+              Gestión y optimización de bases de datos en
+              <span class="text-[#1DFF52]">SQL Server</span>, implementando
+              <br class="hidden md:block" />
+              operaciones CRUD y estableciendo conexiones eficientes con las interfaces
+              <br class="hidden md:block" />
+              de los módulos.
+            </li>
+            <li>
+              Implementación de control de versiones con
+              <span class="text-[#1DFF52]">Git</span> y trabajo colaborativo en
+              <br class="hidden md:block" />
+              entornos ágiles.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
