@@ -33,8 +33,11 @@ const descriptions = [
 ---
 
 <Layout>
-  <main class="space-y-20">
-    <section id="presentation" class="w-full lg:space-y-0 md:space-y-10">
+  <main class="space-y-30">
+    <section
+      id="presentation"
+      class="w-full lg:space-y-0 md:space-y-10 space-y-10"
+    >
       <div
         class="w-full flex justify-between md:justify-center items-center md:gap-x-20 lg:gap-x-150"
       >
@@ -118,79 +121,81 @@ const descriptions = [
       </p>
     </section>
 
-    <section id="xp" class="w-full md:space-y-20 space-y-5">
+    <section id="xp" class="w-full lg:space-y-20 space-y-10">
       <div
-        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+        class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
       >
-        <img src="./imgTxtXP.webp" alt="imgTxtXP" class="absolute z-0" />
-        <p class="z-1">
+        <span
+          class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+        >
+          EXPERIENCIA
+        </span>
+        <p class="z-10 font-semibold">
           ¿<span class="text-[#1DFF52]">Experiencia</span>?
         </p>
       </div>
 
       <div
-        class="w-full md:h-105 h-40 relative flex justify-center items-center"
+        class="w-full h-40 md:h-90 relative flex justify-center items-center"
       >
-        <img src="./imgIDBadge.webp" alt="imgIDBadge" class="absolute z-0" />
-        <a
-          href=""
-          class="md:flex justify-center items-center absolute bottom-8 right-97 hidden"
-        >
-          <div class="btns md:w-[184px] md:h-[46px]"></div>
-          <p class="absolute text-[10px] md:text-2xl">Contactar</p>
-        </a>
+        <img
+          src="./imgIDBadge.webp"
+          alt="imgIDBadge"
+          class="absolute lg:h-90 z-0"
+        />
       </div>
 
       <div
-        class="w-full md:flex justify-center items-start md:space-x-10 space-y-5"
+        class="w-full md:flex justify-center items-start md:space-x-5 lg:space-x-10 space-y-5"
       >
         <div class="md:w-80 flex flex-col items-center space-y-2">
           <img
             src="./imgQrofive.webp"
             alt="imgCompany"
-            class="md:w-50 h-30 md:h-auto"
+            class="md:w-50 h-20 md:h-auto"
           />
           <p class="md:text-3xl font-semibold">QROFIVE</p>
           <div class="flex space-x-3">
             <img
               src="./imgCalendarW1S.webp"
               alt="dateStart"
-              class="md:w-20 w-10"
+              class="lg:w-20 w-10"
             />
             <img
               src="./imgCalendarW1E.webp"
               alt="dateStart"
-              class="md:w-20 w-10"
+              class="lg:w-20 w-10"
             />
           </div>
         </div>
+
         <div
           class="md:w-200 flex flex-col items-center md:items-start w-full text-center md:text-start"
         >
           <div
-            class="bg-[#1DFF52] text-[#000] md:w-150 w-50 p-2 md:rounded-r-[20px] rounded-[10px] md:text-3xl font-semibold"
+            class="bg-[#1DFF52] text-[#000] lg:w-150 md:w-120 p-2 md:rounded-r-[20px] rounded-[10px] md:text-3xl font-semibold"
           >
             <p>Desarrollo Web (5SMART)</p>
           </div>
           <ul
-            class="list-disc list-inside pl-3 md:pl-10 md:pt-5 pt-3 md:space-y-3 md:text-2xl text-[10px] text-start"
+            class="list-disc list-inside pl-3 lg:pl-10 md:pl-6 md:pt-5 pt-3 md:space-y-3 lg:text-2xl md:text-[20px] text-[10px] text-start"
           >
             <li>
               Diseño y desarrollo de módulos web e interfaces dinámicas con
               <span class="text-[#1DFF52]">C#</span>,
               <span class="text-[#1DFF52]">.Net</span> y
-              <br class="hidden md:block" />
+              <br class="hidden lg:block" />
               <span class="text-[#1DFF52]">JavaScript</span>, aplicando el
               patrón
               <span class="text-[#1DFF52]">Modelo-Vista-Controlador</span> (MVC)
               y
-              <br class="hidden md:block" />
+              <br class="hidden lg:block" />
               utilizando <span class="text-[#1DFF52]">DevExpress</span>.
             </li>
             <li>
               Gestión y optimización de bases de datos en
               <span class="text-[#1DFF52]">SQL Server</span>, implementando
-              <br class="hidden md:block" />
+              <br class="hidden lg:block" />
               operaciones CRUD y estableciendo conexiones eficientes con las interfaces
               <br class="hidden md:block" />
               de los módulos.
@@ -198,7 +203,7 @@ const descriptions = [
             <li>
               Implementación de control de versiones con
               <span class="text-[#1DFF52]">Git</span> y trabajo colaborativo en
-              <br class="hidden md:block" />
+              <br class="hidden lg:block" />
               entornos ágiles.
             </li>
           </ul>
@@ -212,7 +217,7 @@ const descriptions = [
           <img
             src="./imgLM.webp"
             alt="imgCompany"
-            class="md:w-50 h-30 md:h-auto"
+            class="md:w-50 h-20 md:h-auto"
           />
           <p class="md:text-3xl font-semibold">
             Servicio Automotriz <br />"Don Fer"
@@ -234,12 +239,12 @@ const descriptions = [
           class="md:w-200 flex flex-col items-center md:items-start w-full text-center md:text-start"
         >
           <div
-            class="bg-[#1DFF52] text-[#000] md:w-150 w-50 p-2 md:rounded-r-[20px] rounded-[10px] md:text-3xl text-1xl font-semibold"
+            class="bg-[#1DFF52] text-[#000] lg:w-150 md:w-120 p-2 md:rounded-r-[20px] rounded-[10px] md:text-3xl font-semibold"
           >
             <p>Desarrollo Web Freelancer</p>
           </div>
           <ul
-            class="list-disc list-inside pl-3 md:pl-10 md:pt-5 pt-3 md:space-y-3 md:text-2xl text-[10px] text-start"
+            class="list-disc list-inside pl-3 lg:pl-10 md:pl-6 md:pt-5 pt-3 md:space-y-3 lg:text-2xl md:text-[20px] text-[10px] text-start"
           >
             <li>
               Diseño colaborativo del sitio web mediante prototipos en
@@ -276,14 +281,14 @@ const descriptions = [
 
     <section id="stacktec" class="w-full space-y-10">
       <div
-        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+        class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
       >
-        <img
-          src="./imgTxtStackTec.webp"
-          alt="imgTxtStackTec"
-          class="absolute z-0"
-        />
-        <p class="z-1">
+        <span
+          class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+        >
+          STACK TEC
+        </span>
+        <p class="z-10 font-semibold">
           Mi <span class="text-[#1DFF52]">stack</span> tecnológico incluye:
         </p>
       </div>
@@ -466,23 +471,23 @@ const descriptions = [
       </div>
     </section>
 
-    <section id="projects" class="w-full md:space-y-20 space-y-5">
+    <section id="projects" class="w-full md:space-y-20 space-y-10">
       <div
-        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+        class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
       >
-        <img
-          src="./imgTxtProjects.webp"
-          alt="imgTxtProjects"
-          class="absolute z-0"
-        />
-        <p class="z-1">
+        <span
+          class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+        >
+          PROYECTOS
+        </span>
+        <p class="z-10 font-semibold">
           Mis <span class="text-[#1DFF52]">Proyectos</span>
         </p>
       </div>
 
       <div class="w-full flex flex-wrap gap-9 justify-center">
         <div
-          class="md:w-100 w-70 bg-[#111] p-5 rounded-4xl space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
           <img
             src=""
@@ -522,7 +527,7 @@ const descriptions = [
         </div>
 
         <div
-          class="md:w-100 w-70 bg-[#111] p-5 rounded-4xl space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
           <img
             src=""
@@ -562,7 +567,7 @@ const descriptions = [
         </div>
 
         <div
-          class="md:w-100 w-70 bg-[#111] p-5 rounded-4xl space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
           <img
             src=""
@@ -602,7 +607,7 @@ const descriptions = [
         </div>
 
         <div
-          class="md:w-100 w-70 bg-[#111] p-5 rounded-4xl space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
           <img
             src=""
@@ -642,7 +647,7 @@ const descriptions = [
         </div>
 
         <div
-          class="md:w-100 w-70 bg-[#111] p-5 rounded-4xl space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
           <img
             src=""
@@ -679,60 +684,60 @@ const descriptions = [
       </div>
     </section>
 
-    <section id="formation" class="w-full md:space-y-20 space-y-5">
+    <section id="formation" class="w-full md:space-y-20 space-y-10">
       <div
-        class="w-full md:text-5xl text-2xl relative text-center flex justify-center items-center"
+        class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
       >
-        <img
-          src="./imgTxtFormation.webp"
-          alt="imgTxtProjects"
-          class="absolute z-0"
-        />
-        <p class="z-1">
+        <span
+          class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+        >
+          FORMACIÓN
+        </span>
+        <p class="z-10 font-semibold">
           Mi <span class="text-[#1DFF52]">formación</span>
         </p>
       </div>
 
       <div class="w-full space-y-5 flex flex-col justify-start items-center">
-        <div
-          class="md:w-5xl flex justify-start items-center md:space-x-7 space-x-4"
-        >
+        <div class="flex justify-start items-center md:space-x-7 space-x-4">
           <span
-            class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-5 ring-1 ring-[#1DFF52] bg-[#000]"
+            class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-3 ring-1 ring-[#1DFF52] bg-[#000]"
           >
           </span>
+
           <div class="flex justify-center items-start">
             <div
-              class="md:w-2xl items-end md:text-2xl text-[10px] text-[#1DFF52]"
+              class="lg:w-2xl items-end lg:text-2xl md:text-[20px] text-[10px] text-[#1DFF52]"
             >
               <p>Licenciatura en Ingeniería de Software.</p>
               <p class="text-white">
                 Universidad Autónoma del Estado de Hidalgo.
               </p>
             </div>
-            <p class="md:w-55 text-end md:text-base text-[10px]">
+            <p class="lg:w-55 text-end md:text-base text-[10px]">
               Agosto 2020 - Noviembre 2024
             </p>
           </div>
         </div>
-        <div
-          class="md:w-5xl flex justify-start items-center md:space-x-7 space-x-4"
-        >
+
+        <div class="flex justify-start items-center md:space-x-7 space-x-4">
           <span
-            class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-5 ring-1 ring-[#1DFF52] bg-[#000]"
+            class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-3 ring-1 ring-[#1DFF52] bg-[#000]"
           >
           </span>
+
           <div class="flex justify-center items-start">
             <div
-              class="md:w-2xl md:text-2xl text-[10px] items-end text-[#1DFF52]"
+              class="lg:w-2xl items-end lg:text-2xl md:text-[20px] text-[10px] text-[#1DFF52]"
             >
               <p>Bachillerato con especialidad en programación.</p>
               <p class="text-white">
-                Centro de Estudios Tecnológicos industrial y de servicios No.
-                26.
+                Centro de Estudios Tecnológicos industrial y de servicios <br
+                  class="hidden md:inline"
+                />No. 26.
               </p>
             </div>
-            <p class="md:w-55 text-end md:text-base text-[10px]">
+            <p class="lg:w-55 text-end md:text-base text-[10px]">
               Agosto 2017 - Julio 2020
             </p>
           </div>
@@ -773,12 +778,12 @@ const descriptions = [
       </div>
     </section>
 
-    <section id="contact" class="w-full md:space-y-20">
+    <section id="contact" class="w-full">
       <div
-        class="w-full h-screen md:p-5 p-2 flex justify-center items-center md:space-y-5 space-y-10"
+        class="w-full h-screen lg:p-5 p-2 flex justify-center items-center md:space-y-5 space-y-10"
       >
         <div
-          class="hidden md:block w-full md:h-full bg-[#1DFF52] md:rounded-l-4xl opacity-50"
+          class="hidden lg:block w-full lg:h-full bg-[#1DFF52] lg:rounded-l-4xl opacity-50"
         >
         </div>
         <div
