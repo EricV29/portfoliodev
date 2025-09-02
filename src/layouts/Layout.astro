@@ -17,7 +17,19 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <img src="/imgOpenWork.webp" alt="imagenOpenToWork" class="absolute md:w-140 w-90 md:-top-45 -top-10 md:translate-x-50 left-1/2 -translate-x-1/2 opacity-20 z-0">
+    <div class="absolute top-0 right-0 w-[540px] h-[540px] z-0 pointer-events-none">
+      <svg viewBox="0 175 400 500" class="w-full h-full">
+        <text style="letter-spacing:5px;" fill="#fff" font-size="80" fill-opacity="0.2" class="uppercase" transform="rotate(-90 270 270)">
+          <textPath href="#circlePath" startOffset="50%" text-anchor="middle" textLength="1600" lengthAdjust="spacingAndGlyphs">
+            #OPEN TO WORK #OPEN TO WORK
+          </textPath>
+          <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="360 270 270" to="0 270 270" dur="40s" repeatCount="indefinite"/>
+        </text>
+        <defs>
+          <path id="circlePath" d="M260,260 m260,0 a260,260 0 1,0 -520,0 a260,260 0 1,0 520,0" />
+        </defs>
+      </svg>
+    </div>
     <Header />
     <slot />
   </body>
