@@ -27,6 +27,15 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import imgVector from "../images/imgVector.webp";
 import imgEric from "../images/imgEric.webp";
+import imgIDBadge from "../images/imgIDBadge.webp";
+import imgQrofive from "../images/imgQrofive.webp";
+import imgCalendarW1S from "../images/imgCalendarW1S.webp";
+import imgCalendarW1E from "../images/imgCalendarW1S.webp";
+import imgLM from "../images/imgLM.webp";
+import imgCalendarW2S from "../images/imgCalendarW2S.webp";
+import imgCalendarW2E from "../images/imgCalendarW2E.webp";
+import imgCertBD from "../images/imgCertBD.webp";
+import imgCertPython from "../images/imgCertPython.webp";
 ---
 
 <Layout>
@@ -157,7 +166,7 @@ import imgEric from "../images/imgEric.webp";
           title="ericjared29@gmail.com"
           class="absolute z-0"
         >
-          <img src="./imgIDBadge.webp" alt="imgIDBadge" class="lg:h-90" />
+          <Image src={imgIDBadge} alt="imgIDBadge" class="lg:w-200" />
         </a>
       </div>
 
@@ -165,23 +174,15 @@ import imgEric from "../images/imgEric.webp";
         class="w-full md:flex justify-center items-start md:space-x-5 lg:space-x-10 space-y-5"
       >
         <div class="md:w-80 flex flex-col items-center space-y-2">
-          <img
-            src="./imgQrofive.webp"
+          <Image
+            src={imgQrofive}
             alt="imgCompany"
             class="md:w-50 h-20 md:h-auto"
           />
           <p class="md:text-3xl font-semibold">QROFIVE</p>
           <div class="flex space-x-3">
-            <img
-              src="./imgCalendarW1S.webp"
-              alt="dateStart"
-              class="lg:w-20 w-10"
-            />
-            <img
-              src="./imgCalendarW1E.webp"
-              alt="dateStart"
-              class="lg:w-20 w-10"
-            />
+            <Image src={imgCalendarW1S} alt="dateStart" class="lg:w-20 w-10" />
+            <Image src={imgCalendarW1E} alt="dateStart" class="lg:w-20 w-10" />
           </div>
         </div>
 
@@ -230,25 +231,13 @@ import imgEric from "../images/imgEric.webp";
         class="w-full md:flex justify-center items-start md:space-x-10 space-y-5"
       >
         <div class="md:w-80 flex flex-col items-center space-y-2 text-center">
-          <img
-            src="./imgLM.webp"
-            alt="imgCompany"
-            class="md:w-50 h-20 md:h-auto"
-          />
+          <Image src={imgLM} alt="imgCompany" class="md:w-50 h-20 md:h-auto" />
           <p class="md:text-3xl font-semibold">
             Servicio Automotriz <br />"Don Fer"
           </p>
           <div class="flex space-x-3">
-            <img
-              src="./imgCalendarW2S.webp"
-              alt="dateStart"
-              class="md:w-20 w-10"
-            />
-            <img
-              src="./imgCalendarW2E.webp"
-              alt="dateStart"
-              class="md:w-20 w-10"
-            />
+            <Image src={imgCalendarW2S} alt="dateStart" class="md:w-20 w-10" />
+            <Image src={imgCalendarW2E} alt="dateStart" class="md:w-20 w-10" />
           </div>
         </div>
         <div
@@ -769,8 +758,8 @@ import imgEric from "../images/imgEric.webp";
             <div
               class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 border-l-1 border-t-1 border-[#fff]"
             >
-              <img
-                src="./imgCertBD.webp"
+              <Image
+                src={imgCertBD}
                 alt="certificateDB"
                 class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1"
               />
@@ -785,8 +774,8 @@ import imgEric from "../images/imgEric.webp";
             <div
               class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 border-l-1 border-t-1 border-[#fff]"
             >
-              <img
-                src="./imgCertPython.webp"
+              <Image
+                src={imgCertPython}
                 alt="certificatePython"
                 class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1"
               />
