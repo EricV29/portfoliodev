@@ -24,6 +24,9 @@ import Tailwind from "../components/icons/Tailwind.astro";
 import Typescript from "../components/icons/Typescript.astro";
 import Unity from "../components/icons/Unity.astro";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import imgVector from "../images/imgVector.webp";
+import imgEric from "../images/imgEric.webp";
 ---
 
 <Layout>
@@ -62,15 +65,16 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="w-full flex justify-center relative z-0">
-          <img
-            src="/imgVector.webp"
-            alt="imagenVector"
-            class="absolute z-1 md:w-full w-[10rem] md:bottom-2"
-            style="filter: drop-shadow(0 0 100px #1DFF52)"
+          <Image
+            src={imgVector}
+            loading="eager"
+            alt="imageVector"
+            class="absolute z-1 md:w-full w-[10rem] md:bottom-2 filter drop-shadow-[0_0_100px_#1DFF52]"
           />
-          <img
-            src="/imgEric.webp"
-            alt="imagenEric"
+          <Image
+            src={imgEric}
+            loading="eager"
+            alt="imageEric"
             class="z-2 md:w-full w-[10rem]"
           />
         </div>
