@@ -14,35 +14,67 @@ import Close from "./icons/Close.astro";
     <span class="absolute md:w-7 w-5"><Close /></span>
   </button>
 
-  <div class="w-full max-w-3xl">
+  <div class="w-full max-w-3xl p-5 lg:p-0">
     <img id="main-image" src="" class="w-full rounded-lg" alt="Main Image" />
   </div>
 
-  <div class="grid grid-cols-4 max-w-3xl gap-4" id="thumbnail-container"></div>
+  <div
+    class="grid grid-cols-4 max-w-3xl gap-4 p-5 lg:p-0"
+    id="thumbnail-container"
+  >
+  </div>
 </div>
 
 <script>
   // Function to load images from props
-  (window as any).loadGalleryImages = function (images: string[]) {
-    const mainImage = document.getElementById("main-image") as HTMLImageElement;
+  (window as any).loadGalleryImages = function (media: string[]) {
+    const mainContainer = document.querySelector("#gallery .w-full.max-w-3xl");
     const container = document.getElementById("thumbnail-container");
     const gallery = document.getElementById("gallery");
 
-    if (!mainImage || !container || !gallery) {
+    if (!mainContainer || !container || !gallery) {
       console.error("No se encontraron los elementos");
       return;
     }
 
-    mainImage.src = images[0];
+    function isVideo(url: string) {
+      return /\.(mp4|webm|ogg|mov)$/i.test(url);
+    }
+
+    const firstMedia = media[0];
+
+    if (isVideo(firstMedia)) {
+      mainContainer.innerHTML = `
+            <video id="main-media" class="w-full rounded-lg" controls>
+                <source src="${firstMedia}" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+        `;
+    } else {
+      mainContainer.innerHTML = `
+            <img id="main-media" src="${firstMedia}" class="w-full rounded-lg" alt="Main Media">
+        `;
+    }
+
     container.innerHTML = "";
 
-    images.forEach((img, index) => {
-      const thumb = document.createElement("img") as HTMLImageElement;
-      thumb.src = img;
-      thumb.className =
-        "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
-      thumb.alt = `Thumb ${index + 1}`;
-      container.appendChild(thumb);
+    media.forEach((mediaUrl, index) => {
+      if (isVideo(mediaUrl)) {
+        const thumb = document.createElement("video");
+        thumb.src = mediaUrl;
+        thumb.className =
+          "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
+        thumb.muted = true;
+        thumb.preload = "metadata";
+        container.appendChild(thumb);
+      } else {
+        const thumb = document.createElement("img") as HTMLImageElement;
+        thumb.src = mediaUrl;
+        thumb.className =
+          "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
+        thumb.alt = `Thumb ${index + 1}`;
+        container.appendChild(thumb);
+      }
     });
 
     gallery.classList.remove("invisible");
@@ -51,18 +83,27 @@ import Close from "./icons/Close.astro";
 
   // Event listener para thumbnails
   document.addEventListener("click", function (e) {
-    if (
-      e.target &&
-      e.target instanceof HTMLElement &&
-      e.target.classList.contains("thumb")
-    ) {
-      const mainImage = document.getElementById(
-        "main-image"
-      ) as HTMLImageElement;
-      const thumbImage = e.target as HTMLImageElement;
+    const target = e.target as HTMLElement;
 
-      if (mainImage && thumbImage.src) {
-        mainImage.src = thumbImage.src;
+    if (target?.classList?.contains("thumb")) {
+      const mainContainer = document.querySelector(
+        "#gallery .w-full.max-w-3xl"
+      );
+
+      if (mainContainer) {
+        if (target.tagName === "VIDEO") {
+          const videoSrc = (target as HTMLVideoElement).src;
+          mainContainer.innerHTML = `
+                    <video id="main-media" class="w-full rounded-lg" controls>
+                        <source src="${videoSrc}" type="video/mp4">
+                    </video>
+                `;
+        } else {
+          const imgSrc = (target as HTMLImageElement).src;
+          mainContainer.innerHTML = `
+                    <img id="main-media" src="${imgSrc}" class="w-full rounded-lg" alt="Main Media">
+                `;
+        }
       }
     }
   });
@@ -71,6 +112,12 @@ import Close from "./icons/Close.astro";
   document
     .getElementById("closeGallery")
     ?.addEventListener("click", function () {
+      const video = document.querySelector<HTMLVideoElement>("#main-media");
+      if (video && video.tagName === "VIDEO") {
+        video.pause();
+        video.currentTime = 0; // opcional: reinicia al inicio
+      }
+
       document.getElementById("gallery")?.classList.add("invisible");
       document.body.style.overflow = "auto";
     });

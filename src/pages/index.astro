@@ -39,7 +39,14 @@ import imgCertBD from "../images/imgCertBD.webp";
 import imgCertPython from "../images/imgCertPython.webp";
 import imgGA1 from "../images/GA/imgGA1.png";
 import imgGA2 from "../images/GA/imgGA2.png";
+import imgC1 from "../images/Courier/imgC1.png";
+import demoC1 from "../images/Courier/demoC1.mp4";
 import Gallery from "../components/Gallery.astro";
+
+const projectsMedia = {
+  projectGA: [imgGA1.src, imgGA2.src],
+  projectCourier: [imgC1.src, demoC1],
+};
 ---
 
 <Layout>
@@ -515,11 +522,11 @@ import Gallery from "../components/Gallery.astro";
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Gestión automotriz</p>
             <button
-              onclick={`window.loadGalleryImages(['${imgGA1.src}', '${imgGA2.src}'])`}
+              onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGA)})`}
               class="flex justify-center items-center relative cursor-pointer"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Imagei /></span>
+              <span class="absolute md:w-7 w-5"><Play /></span>
             </button>
           </div>
           <div class="w-full">
@@ -591,17 +598,20 @@ import Gallery from "../components/Gallery.astro";
         <div
           class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
-          <img
-            src=""
-            alt="imgProjectGA"
-            class="w-full md:h-[300px] h-[150px] rounded-2xl bg-[#1d1d1d]"
+          <Image
+            src={imgC1}
+            alt="imgc1"
+            class="w-full md:h-[300px] h-[150px] object-cover object-left rounded-2xl bg-[#1d1d1d]"
           />
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Courier</p>
-            <a href="" class="flex justify-center items-center relative">
+            <button
+              onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectCourier)})`}
+              class="flex justify-center items-center relative cursor-pointer"
+            >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Play /></span>
-            </a>
+            </button>
           </div>
           <div class="w-full">
             <span
