@@ -15,6 +15,7 @@ import Linkedin from "../components/icons/Linkedin.astro";
 import Mysql from "../components/icons/Mysql.astro";
 import Nodejs from "../components/icons/Nodejs.astro";
 import Play from "../components/icons/Play.astro";
+import Link from "../components/icons/Link.astro";
 import Imagei from "../components/icons/Imagei.astro";
 import Playwright from "../components/icons/Playwright.astro";
 import Postgresql from "../components/icons/Postgresql.astro";
@@ -41,11 +42,16 @@ import imgGA1 from "../images/GA/imgGA1.png";
 import imgGA2 from "../images/GA/imgGA2.png";
 import imgC1 from "../images/Courier/imgC1.png";
 import demoC1 from "../images/Courier/demoC1.mp4";
+import imgG1 from "../images/GetRoasted/imgG1.png";
+import demoG1 from "../images/GetRoasted/demoG1.mp4";
+import imgM1 from "../images/Manzania/imgM1.png";
+import imgIEEE1 from "../images/IEEE/imgIEEE1.png";
 import Gallery from "../components/Gallery.astro";
 
 const projectsMedia = {
   projectGA: [imgGA1.src, imgGA2.src],
   projectCourier: [imgC1.src, demoC1],
+  projectGetRoasted: [imgG1.src, demoG1],
 };
 ---
 
@@ -526,7 +532,7 @@ const projectsMedia = {
               class="flex justify-center items-center relative cursor-pointer"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Play /></span>
+              <span class="absolute md:w-7 w-5"><Imagei /></span>
             </button>
           </div>
           <div class="w-full">
@@ -552,6 +558,44 @@ const projectsMedia = {
             productos afiliados, facilita la comunicación con los clientes
             mediante chat y estados de servicio, y muestra fechas importantes en
             un calendario junto con detalles específicos de cada servicio.
+          </p>
+        </div>
+
+        <div
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+        >
+          <Image
+            src={imgIEEE1}
+            alt="imgIEEE1"
+            class="w-full md:h-[300px] h-[150px] object-cover object-left rounded-2xl bg-[#1d1d1d]"
+          />
+          <div class="w-full flex justify-between items-center md:text-2xl">
+            <p class="font-semibold">IEEE - ESTL STUDENT BRANCH</p>
+            <a
+              href="https://ieee-estl.com/"
+              target="_blank"
+              class="flex justify-center items-center relative"
+            >
+              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <span class="absolute md:w-7 w-5"><Link /></span>
+            </a>
+          </div>
+          <div class="w-full">
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >Astro</span
+            >
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >Tailwind</span
+            >
+          </div>
+          <p class="font-normal">
+            Sitio web de la rama estudiantil de la IEEE para ESTL sección
+            México, diseñada para centralizar información sobre eventos y
+            proyectos para estudiantes y profesionales de ingeniería de
+            software. Facilita la difusión de actividades académicas y la
+            participación en iniciativas tecnológicas.
           </p>
         </div>
 
@@ -632,9 +676,9 @@ const projectsMedia = {
             >
           </div>
           <p class="font-normal">
-            Lorem Ipsum is simply dummy text of the prinIpsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            Plataforma web para PyMEs que centraliza la comunicación con
+            clientes mediante tickets, gestión de usuarios, documentos y un
+            perfil de afiliado perzonalizable.
           </p>
         </div>
 
@@ -681,16 +725,63 @@ const projectsMedia = {
         <div
           class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
-          <img
-            src=""
-            alt="imgProjectGA"
-            class="w-full md:h-[300px] h-[150px] rounded-2xl bg-[#1d1d1d]"
+          <Image
+            src={imgG1}
+            alt="imgc1"
+            class="w-full md:h-[300px] h-[150px] object-cover object-left rounded-2xl bg-[#1d1d1d]"
+          />
+          <div class="w-full flex justify-between items-center md:text-2xl">
+            <p class="font-semibold">GetRoasted</p>
+            <button
+              onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGetRoasted)})`}
+              class="flex justify-center items-center relative cursor-pointer"
+            >
+              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <span class="absolute md:w-7 w-5"><Play /></span>
+            </button>
+          </div>
+          <div class="w-full">
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >C#</span
+            >
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >WPF</span
+            >
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >XAML Styles</span
+            >
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
+              >MySQL</span
+            >
+          </div>
+          <p class="font-normal">
+            Sistema de punto de venta a medida para un restaurante que gestiona
+            ventas, mesas, productos y proveedores, optimizando procesos
+            internos y mejorando el servicio al cliente.
+          </p>
+        </div>
+
+        <div
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+        >
+          <Image
+            src={imgM1}
+            alt="imgM1"
+            class="w-full md:h-[300px] h-[150px] object-cover rounded-2xl bg-[#1d1d1d]"
           />
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Manzania</p>
-            <a href="" class="flex justify-center items-center relative">
+            <a
+              href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
+              target="_blank"
+              class="flex justify-center items-center relative"
+            >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Play /></span>
+              <span class="absolute md:w-7 w-5"><Link /></span>
             </a>
           </div>
           <div class="w-full">
@@ -708,9 +799,9 @@ const projectsMedia = {
             >
           </div>
           <p class="font-normal">
-            Lorem Ipsum is simply dummy text of the prinIpsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            Manzania es un juego de aventura donde controlas a Malus, exploras
+            tres mundos llenos de manzanas, enfrentas enemigos, recolectas
+            frutas resistentes al virus y ayudas a salvar su planeta.
           </p>
         </div>
       </div>
