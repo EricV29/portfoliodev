@@ -15,6 +15,7 @@ import Linkedin from "../components/icons/Linkedin.astro";
 import Mysql from "../components/icons/Mysql.astro";
 import Nodejs from "../components/icons/Nodejs.astro";
 import Play from "../components/icons/Play.astro";
+import Imagei from "../components/icons/Imagei.astro";
 import Playwright from "../components/icons/Playwright.astro";
 import Postgresql from "../components/icons/Postgresql.astro";
 import Python from "../components/icons/Python.astro";
@@ -36,6 +37,9 @@ import imgCalendarW2S from "../images/imgCalendarW2S.webp";
 import imgCalendarW2E from "../images/imgCalendarW2E.webp";
 import imgCertBD from "../images/imgCertBD.webp";
 import imgCertPython from "../images/imgCertPython.webp";
+import imgGA1 from "../images/GA/imgGA1.png";
+import imgGA2 from "../images/GA/imgGA2.png";
+import Gallery from "../components/Gallery.astro";
 ---
 
 <Layout>
@@ -234,7 +238,11 @@ import imgCertPython from "../images/imgCertPython.webp";
         class="w-full md:flex justify-center items-start md:space-x-10 space-y-5"
       >
         <div class="md:w-80 flex flex-col items-center space-y-2 text-center">
-          <Image src={imgLM} alt="imgCompany" class="md:w-50 w-auto h-20 md:h-auto" />
+          <Image
+            src={imgLM}
+            alt="imgCompany"
+            class="md:w-50 w-auto h-20 md:h-auto"
+          />
           <p class="md:text-3xl font-semibold">
             Servicio Automotriz <br />"Don Fer"
           </p>
@@ -493,21 +501,26 @@ import imgCertPython from "../images/imgCertPython.webp";
         </p>
       </div>
 
+      <Gallery />
+
       <div class="w-full flex flex-wrap gap-9 justify-center">
         <div
           class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
-          <img
-            src=""
-            alt="imgProjectGA"
-            class="w-full md:h-[300px] h-[150px] rounded-2xl bg-[#1d1d1d]"
+          <Image
+            src={imgGA1}
+            alt="imgGA1"
+            class="w-full md:h-[300px] h-[150px] object-cover object-left rounded-2xl bg-[#1d1d1d]"
           />
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Gestión automotriz</p>
-            <a href="" class="flex justify-center items-center relative">
+            <button
+              onclick={`window.loadGalleryImages(['${imgGA1.src}', '${imgGA2.src}'])`}
+              class="flex justify-center items-center relative cursor-pointer"
+            >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Play /></span>
-            </a>
+              <span class="absolute md:w-7 w-5"><Imagei /></span>
+            </button>
           </div>
           <div class="w-full">
             <span
@@ -528,9 +541,10 @@ import imgCertPython from "../images/imgCertPython.webp";
             >
           </div>
           <p class="font-normal">
-            Lorem Ipsum is simply dummy text of the prinIpsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            Plataforma web para refaccionarias que organiza clientes, autos y
+            productos afiliados, facilita la comunicación con los clientes
+            mediante chat y estados de servicio, y muestra fechas importantes en
+            un calendario junto con detalles específicos de cada servicio.
           </p>
         </div>
 

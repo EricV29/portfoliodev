@@ -1,0 +1,77 @@
+---
+import Close from "./icons/Close.astro";
+---
+
+<div
+  id="gallery"
+  class="invisible fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex flex-col items-center justify-center space-y-4 min-h-screen"
+>
+  <button
+    id="closeGallery"
+    class="top-4 right-4 flex justify-center items-center absolute cursor-pointer hover:scale-105 transition-transform duration-200"
+  >
+    <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+    <span class="absolute md:w-7 w-5"><Close /></span>
+  </button>
+
+  <div class="w-full max-w-3xl">
+    <img id="main-image" src="" class="w-full rounded-lg" alt="Main Image" />
+  </div>
+
+  <div class="grid grid-cols-4 max-w-3xl gap-4" id="thumbnail-container"></div>
+</div>
+
+<script>
+  // Function to load images from props
+  (window as any).loadGalleryImages = function (images: string[]) {
+    const mainImage = document.getElementById("main-image") as HTMLImageElement;
+    const container = document.getElementById("thumbnail-container");
+    const gallery = document.getElementById("gallery");
+
+    if (!mainImage || !container || !gallery) {
+      console.error("No se encontraron los elementos");
+      return;
+    }
+
+    mainImage.src = images[0];
+    container.innerHTML = "";
+
+    images.forEach((img, index) => {
+      const thumb = document.createElement("img") as HTMLImageElement;
+      thumb.src = img;
+      thumb.className =
+        "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
+      thumb.alt = `Thumb ${index + 1}`;
+      container.appendChild(thumb);
+    });
+
+    gallery.classList.remove("invisible");
+    document.body.style.overflow = "hidden";
+  };
+
+  // Event listener para thumbnails
+  document.addEventListener("click", function (e) {
+    if (
+      e.target &&
+      e.target instanceof HTMLElement &&
+      e.target.classList.contains("thumb")
+    ) {
+      const mainImage = document.getElementById(
+        "main-image"
+      ) as HTMLImageElement;
+      const thumbImage = e.target as HTMLImageElement;
+
+      if (mainImage && thumbImage.src) {
+        mainImage.src = thumbImage.src;
+      }
+    }
+  });
+
+  // Gallery close
+  document
+    .getElementById("closeGallery")
+    ?.addEventListener("click", function () {
+      document.getElementById("gallery")?.classList.add("invisible");
+      document.body.style.overflow = "auto";
+    });
+</script>
