@@ -46,6 +46,7 @@ import imgG1 from "../images/GetRoasted/imgG1.png";
 import demoG1 from "../images/GetRoasted/demoG1.mp4";
 import imgM1 from "../images/Manzania/imgM1.png";
 import imgIEEE1 from "../images/IEEE/imgIEEE1.png";
+import imgL1 from "../images/Linkify/imgL1.png";
 import Gallery from "../components/Gallery.astro";
 
 const projectsMedia = {
@@ -602,17 +603,33 @@ const projectsMedia = {
         <div
           class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
         >
-          <img
-            src=""
-            alt="imgProjectGA"
-            class="w-full md:h-[300px] h-[150px] rounded-2xl bg-[#1d1d1d]"
+          <Image
+            src={imgL1}
+            alt="imgL1"
+            class="w-full md:h-[300px] h-[150px] object-cover object-left rounded-2xl bg-[#1d1d1d]"
           />
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Linkify</p>
-            <a href="" class="flex justify-center items-center relative">
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Play /></span>
-            </a>
+            <div class="flex space-x-2">
+              <a
+                href="https://github.com/EricV29/Manzania"
+                target="_blank"
+                class="flex justify-center items-center relative"
+              >
+                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
+                </div>
+                <span class="absolute md:w-7 w-5"><Github /></span>
+              </a>
+              <a
+                href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
+                target="_blank"
+                class="flex justify-center items-center relative"
+              >
+                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
+                </div>
+                <span class="absolute md:w-7 w-5"><Play /></span>
+              </a>
+            </div>
           </div>
           <div class="w-full">
             <span
@@ -775,14 +792,26 @@ const projectsMedia = {
           />
           <div class="w-full flex justify-between items-center md:text-2xl">
             <p class="font-semibold">Manzania</p>
-            <a
-              href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
-              target="_blank"
-              class="flex justify-center items-center relative"
-            >
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Link /></span>
-            </a>
+            <div class="flex space-x-2">
+              <a
+                href="https://github.com/EricV29/Manzania"
+                target="_blank"
+                class="flex justify-center items-center relative"
+              >
+                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
+                </div>
+                <span class="absolute md:w-7 w-5"><Github /></span>
+              </a>
+              <a
+                href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
+                target="_blank"
+                class="flex justify-center items-center relative"
+              >
+                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
+                </div>
+                <span class="absolute md:w-7 w-5"><Link /></span>
+              </a>
+            </div>
           </div>
           <div class="w-full">
             <span
