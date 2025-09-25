@@ -47,12 +47,14 @@ import demoG1 from "../images/GetRoasted/demoG1.mp4";
 import imgM1 from "../images/Manzania/imgM1.png";
 import imgIEEE1 from "../images/IEEE/imgIEEE1.png";
 import imgL1 from "../images/Linkify/imgL1.png";
+import demoL1 from "../images/Linkify/demoL1.mp4";
 import Gallery from "../components/Gallery.astro";
 
 const projectsMedia = {
   projectGA: [imgGA1.src, imgGA2.src],
   projectCourier: [imgC1.src, demoC1],
   projectGetRoasted: [imgG1.src, demoG1],
+  projectLinkify: [imgL1.src, demoL1],
 };
 ---
 
@@ -620,15 +622,14 @@ const projectsMedia = {
                 </div>
                 <span class="absolute md:w-7 w-5"><Github /></span>
               </a>
-              <a
-                href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
-                target="_blank"
-                class="flex justify-center items-center relative"
+              <button
+                onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectLinkify)})`}
+                class="flex justify-center items-center relative cursor-pointer"
               >
                 <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
                 </div>
                 <span class="absolute md:w-7 w-5"><Play /></span>
-              </a>
+              </button>
             </div>
           </div>
           <div class="w-full">
@@ -650,9 +651,10 @@ const projectsMedia = {
             >
           </div>
           <p class="font-normal">
-            Lorem Ipsum is simply dummy text of the prinIpsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
+            Sistema de gestión escolar que administra préstamos de equipos como
+            Lego Spike, Arduino, Raspberry Pi, dispositivos de aulas y libros de
+            la biblioteca, registrando solicitudes de usuarios y permitiendo al
+            administrador dar seguimiento y finalizar los préstamos.
           </p>
         </div>
 
@@ -696,46 +698,6 @@ const projectsMedia = {
             Plataforma web para PyMEs que centraliza la comunicación con
             clientes mediante tickets, gestión de usuarios, documentos y un
             perfil de afiliado perzonalizable.
-          </p>
-        </div>
-
-        <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
-        >
-          <img
-            src=""
-            alt="imgProjectGA"
-            class="w-full md:h-[300px] h-[150px] rounded-2xl bg-[#1d1d1d]"
-          />
-          <div class="w-full flex justify-between items-center md:text-2xl">
-            <p class="font-semibold">Punto de Venta</p>
-            <a href="" class="flex justify-center items-center relative">
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
-              <span class="absolute md:w-7 w-5"><Play /></span>
-            </a>
-          </div>
-          <div class="w-full">
-            <span
-              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
-              >C#</span
-            >
-            <span
-              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
-              >.Net</span
-            >
-            <span
-              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
-              >WPF</span
-            >
-            <span
-              class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400"
-              >SQL Server</span
-            >
-          </div>
-          <p class="font-normal">
-            Lorem Ipsum is simply dummy text of the prinIpsum passages, and more
-            recently with desktop publishing software like Aldus PageMaker
-            including versions of Lorem Ipsum.
           </p>
         </div>
 
