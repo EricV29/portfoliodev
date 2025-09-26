@@ -55,11 +55,14 @@ const projectsMedia = {
   projectCourier: [imgC1.src, demoC1],
   projectGetRoasted: [imgG1.src, demoG1],
   projectLinkify: [imgL1.src, demoL1],
+  certBD: [imgCertBD.src],
+  certPython: [imgCertPython.src],
 };
 ---
 
 <Layout>
   <main class="space-y-30">
+    <!--PRESENTATION SECTION -->
     <section
       id="presentation"
       class="w-full lg:space-y-0 md:space-y-10 space-y-10"
@@ -117,7 +120,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
-              class="flex justify-center items-center relative"
+              class="flex justify-center items-center relative btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Linkedin /></span>
@@ -127,7 +130,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="GitHub"
-              class="flex justify-center items-center"
+              class="flex justify-center items-center btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Github /></span>
@@ -139,7 +142,7 @@ const projectsMedia = {
             target="_blank"
             rel="noopener"
             aria-label="Gmail"
-            class="flex justify-center items-center"
+            class="flex justify-center items-center btnsa"
           >
             <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
             <span class="absolute md:w-9 w-5"><Gmail /></span>
@@ -148,6 +151,7 @@ const projectsMedia = {
       </div>
     </section>
 
+    <!--ABOUTME SECTION -->
     <section id="aboutme" class="w-auto text-center md:text-3xl">
       <p>
         Hola, yo soy <span class="text-[#1DFF52]">Eric</span>, profesional y
@@ -167,6 +171,7 @@ const projectsMedia = {
       </p>
     </section>
 
+    <!--EXPERIENCE SECTION -->
     <section id="xp" class="w-full lg:space-y-20 space-y-10">
       <div
         class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
@@ -311,6 +316,7 @@ const projectsMedia = {
       </div>
     </section>
 
+    <!--STACTECK SECTION -->
     <section id="stacktec" class="w-full space-y-10">
       <div
         class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
@@ -503,6 +509,7 @@ const projectsMedia = {
       </div>
     </section>
 
+    <!--PROJECTS SECTION -->
     <section id="projects" class="w-full md:space-y-20 space-y-10 scroll-mt-20">
       <div
         class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
@@ -522,7 +529,7 @@ const projectsMedia = {
       <div class="w-full flex flex-wrap gap-9 justify-center">
         <!--Gestion Automotriz-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgGA1}
@@ -533,7 +540,7 @@ const projectsMedia = {
             <p class="font-semibold">Gestión automotriz</p>
             <button
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGA)})`}
-              class="flex justify-center items-center relative cursor-pointer"
+              class="flex justify-center items-center relative cursor-pointer btnsa"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Imagei /></span>
@@ -567,7 +574,7 @@ const projectsMedia = {
 
         <!--IEEE-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgIEEE1}
@@ -579,7 +586,7 @@ const projectsMedia = {
             <a
               href="https://ieee-estl.com/"
               target="_blank"
-              class="flex justify-center items-center relative"
+              class="flex justify-center items-center relative btnsa"
               aria-label="LinkIEEE"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
@@ -607,7 +614,7 @@ const projectsMedia = {
 
         <!--Linkify-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgL1}
@@ -621,7 +628,7 @@ const projectsMedia = {
                 href="https://github.com/EricV29/Linkify"
                 target="_blank"
                 aria-label="GitHubLinkLinkify"
-                class="flex justify-center items-center relative"
+                class="flex justify-center items-center relative btnsa"
               >
                 <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
                 </div>
@@ -629,7 +636,7 @@ const projectsMedia = {
               </a>
               <button
                 onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectLinkify)})`}
-                class="flex justify-center items-center relative cursor-pointer"
+                class="flex justify-center items-center relative cursor-pointer btnsa"
               >
                 <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
                 </div>
@@ -665,7 +672,7 @@ const projectsMedia = {
 
         <!--Courier-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgC1}
@@ -676,7 +683,7 @@ const projectsMedia = {
             <p class="font-semibold">Courier</p>
             <button
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectCourier)})`}
-              class="flex justify-center items-center relative cursor-pointer"
+              class="flex justify-center items-center relative cursor-pointer btnsa"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Play /></span>
@@ -709,7 +716,7 @@ const projectsMedia = {
 
         <!--GetRoasted-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgG1}
@@ -720,7 +727,7 @@ const projectsMedia = {
             <p class="font-semibold">GetRoasted</p>
             <button
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGetRoasted)})`}
-              class="flex justify-center items-center relative cursor-pointer"
+              class="flex justify-center items-center relative cursor-pointer btnsa"
             >
               <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Play /></span>
@@ -753,7 +760,7 @@ const projectsMedia = {
 
         <!--Manzania-->
         <div
-          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff]"
+          class="lg:w-100 md:w-85 w-70 bg-[#111] p-3 rounded-[20px] space-y-3 border-l-1 border-t-1 border-[#fff] cardp"
         >
           <Image
             src={imgM1}
@@ -767,7 +774,7 @@ const projectsMedia = {
                 href="https://github.com/EricV29/Manzania"
                 target="_blank"
                 aria-label="GitHubLinkManzania"
-                class="flex justify-center items-center relative"
+                class="flex justify-center items-center relative btnsa"
               >
                 <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
                 </div>
@@ -777,7 +784,7 @@ const projectsMedia = {
                 href="https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania"
                 target="_blank"
                 aria-label="GameLinkManzania"
-                class="flex justify-center items-center relative"
+                class="flex justify-center items-center relative btnsa"
               >
                 <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
                 </div>
@@ -808,6 +815,7 @@ const projectsMedia = {
       </div>
     </section>
 
+    <!--FORMATION SECTION -->
     <section
       id="formation"
       class="w-full md:space-y-20 space-y-10 scroll-mt-20"
@@ -875,14 +883,18 @@ const projectsMedia = {
             class="w-5xl flex overflow-x-auto snap-x snap-mandatory space-x-4 p-4"
           >
             <div
-              class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 border-l-1 border-t-1 border-[#fff]"
+              class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 card"
             >
-              <Image
-                src={imgCertBD}
-                alt="certificateDB"
-                class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1"
-              />
-
+              <button
+                onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.certBD)})`}
+                class="w-full h-full"
+              >
+                <Image
+                  src={imgCertBD}
+                  alt="certificateDB"
+                  class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1 btnsa"
+                />
+              </button>
               <p
                 class="absolute w-full h-25 bottom-0 z-2 text-[20px] p-4 bg-black/50 backdrop-blur-sm rounded-b-3xl"
               >
@@ -891,13 +903,18 @@ const projectsMedia = {
             </div>
 
             <div
-              class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 border-l-1 border-t-1 border-[#fff]"
+              class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 card"
             >
-              <Image
-                src={imgCertPython}
-                alt="certificatePython"
-                class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1"
-              />
+              <button
+                onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.certPython)})`}
+                class="w-full h-full"
+              >
+                <Image
+                  src={imgCertPython}
+                  alt="imgCertPython"
+                  class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1 btnsa"
+                />
+              </button>
               <p
                 class="absolute w-full h-25 bottom-0 z-2 text-[20px] p-4 bg-black/50 backdrop-blur-sm rounded-b-3xl"
               >
@@ -909,6 +926,7 @@ const projectsMedia = {
       </div>
     </section>
 
+    <!--CONTACT SECTION -->
     <section id="contact" class="w-full">
       <div
         class="w-full h-screen lg:p-5 p-2 flex justify-center items-center md:space-y-5 space-y-10"
@@ -930,7 +948,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
-              class="flex justify-center items-center relative"
+              class="flex justify-center items-center relative btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Linkedin /></span>
@@ -941,7 +959,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="Gmail"
-              class="flex justify-center items-center"
+              class="flex justify-center items-center btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Gmail /></span>
@@ -951,7 +969,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="GitHub"
-              class="flex justify-center items-center"
+              class="flex justify-center items-center btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Github /></span>
@@ -961,7 +979,7 @@ const projectsMedia = {
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
-              class="flex justify-center items-center"
+              class="flex justify-center items-center btnsa"
             >
               <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Instagram /></span>

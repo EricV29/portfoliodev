@@ -1,10 +1,40 @@
 @import "tailwindcss";
 
 .btns {
-    background-color: #222222;
-    border: 0.5px solid rgba(17, 17, 17, 0.27);
-    border-radius: 10px;
-    filter: blur(0.5px);
-    box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-  }
+  background-color: #222222;
+  border: 0.5px solid rgba(17, 17, 17, 0.27);
+  border-radius: 10px;
+  filter: blur(0.5px);
+  box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+.btnsa {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btnsa:hover {
+  transform: scale(1.05);
+}
+
+.cardp {
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardp:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card {
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-radius: 1.5rem;
+  transition: border-color 0.3s ease-in-out;
+  opacity: 0.7;
+  border-left-color: #ffffff;
+  border-top-color: #ffffff;
+}
+
+.card:hover {
+  opacity: 1;
+}
