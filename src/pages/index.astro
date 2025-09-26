@@ -60,7 +60,10 @@ const projectsMedia = {
 };
 ---
 
-<Layout>
+<Layout
+  title="Porfolio de Eric - Desarrollador y Programador Web"
+  description="Contacta a Eric para crear tu aplicación, servicio, diseño y prototipo web o de escritorio."
+>
   <main class="space-y-30">
     <!--PRESENTATION SECTION -->
     <section
@@ -122,7 +125,7 @@ const projectsMedia = {
               aria-label="LinkedIn"
               class="flex justify-center items-center relative btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Linkedin /></span>
             </a>
             <a
@@ -132,7 +135,7 @@ const projectsMedia = {
               aria-label="GitHub"
               class="flex justify-center items-center btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Github /></span>
             </a>
           </div>
@@ -144,7 +147,7 @@ const projectsMedia = {
             aria-label="Gmail"
             class="flex justify-center items-center btnsa"
           >
-            <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+            <div class="btns md:size-[70px] size-[40px]"></div>
             <span class="absolute md:w-9 w-5"><Gmail /></span>
           </a>
         </div>
@@ -192,7 +195,7 @@ const projectsMedia = {
         <a
           href="mailto:ericjared29@gmail.com?subject=Contacto%20desde%20portafolio&body=Hola,%20me%20gustaría%20ponerme%20en%20contacto%20contigo%20para%20hablar%20sobre%20[tema]."
           title="ericjared29@gmail.com"
-          class="absolute z-0"
+          class="absolute z-0 cardp"
         >
           <Image src={imgIDBadge} alt="imgIDBadge" class="lg:w-200" />
         </a>
@@ -542,7 +545,7 @@ const projectsMedia = {
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGA)})`}
               class="flex justify-center items-center relative cursor-pointer btnsa"
             >
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <div class="btns md:size-[50px] size-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Imagei /></span>
             </button>
           </div>
@@ -589,7 +592,7 @@ const projectsMedia = {
               class="flex justify-center items-center relative btnsa"
               aria-label="LinkIEEE"
             >
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <div class="btns md:size-[50px] size-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Link /></span>
             </a>
           </div>
@@ -630,16 +633,14 @@ const projectsMedia = {
                 aria-label="GitHubLinkLinkify"
                 class="flex justify-center items-center relative btnsa"
               >
-                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
-                </div>
+                <div class="btns md:size-[50px] size-[30px]"></div>
                 <span class="absolute md:w-7 w-5"><Github /></span>
               </a>
               <button
                 onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectLinkify)})`}
                 class="flex justify-center items-center relative cursor-pointer btnsa"
               >
-                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
-                </div>
+                <div class="btns md:size-[50px] size-[30px]"></div>
                 <span class="absolute md:w-7 w-5"><Play /></span>
               </button>
             </div>
@@ -685,7 +686,7 @@ const projectsMedia = {
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectCourier)})`}
               class="flex justify-center items-center relative cursor-pointer btnsa"
             >
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <div class="btns md:size-[50px] size-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Play /></span>
             </button>
           </div>
@@ -707,7 +708,7 @@ const projectsMedia = {
               >MySQL</span
             >
           </div>
-          <p class="font-normal">
+          <p class="font-normal text-pretty">
             Plataforma web para PyMEs que centraliza la comunicación con
             clientes mediante tickets, gestión de usuarios, documentos y un
             perfil de afiliado perzonalizable.
@@ -729,7 +730,7 @@ const projectsMedia = {
               onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.projectGetRoasted)})`}
               class="flex justify-center items-center relative cursor-pointer btnsa"
             >
-              <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]"></div>
+              <div class="btns md:size-[50px] size-[30px]"></div>
               <span class="absolute md:w-7 w-5"><Play /></span>
             </button>
           </div>
@@ -776,8 +777,7 @@ const projectsMedia = {
                 aria-label="GitHubLinkManzania"
                 class="flex justify-center items-center relative btnsa"
               >
-                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
-                </div>
+                <div class="btns md:size-[50px] size-[30px]"></div>
                 <span class="absolute md:w-7 w-5"><Github /></span>
               </a>
               <a
@@ -786,8 +786,7 @@ const projectsMedia = {
                 aria-label="GameLinkManzania"
                 class="flex justify-center items-center relative btnsa"
               >
-                <div class="btns md:w-[50px] w-[30px] md:h-[50px] h-[30px]">
-                </div>
+                <div class="btns md:size-[50px] size-[30px]"></div>
                 <span class="absolute md:w-7 w-5"><Link /></span>
               </a>
             </div>
@@ -950,7 +949,7 @@ const projectsMedia = {
               aria-label="LinkedIn"
               class="flex justify-center items-center relative btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Linkedin /></span>
             </a>
             <a
@@ -961,7 +960,7 @@ const projectsMedia = {
               aria-label="Gmail"
               class="flex justify-center items-center btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Gmail /></span>
             </a>
             <a
@@ -971,7 +970,7 @@ const projectsMedia = {
               aria-label="GitHub"
               class="flex justify-center items-center btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Github /></span>
             </a>
             <a
@@ -981,7 +980,7 @@ const projectsMedia = {
               aria-label="Instagram"
               class="flex justify-center items-center btnsa"
             >
-              <div class="btns md:w-[70px] w-[40px] md:h-[70px] h-[40px]"></div>
+              <div class="btns md:size-[70px] size-[40px]"></div>
               <span class="absolute md:w-9 w-5"><Instagram /></span>
             </a>
           </div>
