@@ -26,8 +26,7 @@ import Close from "./icons/Close.astro";
 </div>
 
 <script>
-  // Function to load images from props
-  (window as any).loadGalleryImages = function (media: string[]) {
+  (window as any).loadGalleryImages = function (media: any) {
     const mainContainer = document.querySelector("#gallery .w-full.max-w-3xl");
     const container = document.getElementById("thumbnail-container");
     const gallery = document.getElementById("gallery");
@@ -37,38 +36,57 @@ import Close from "./icons/Close.astro";
       return;
     }
 
-    function isVideo(url: string) {
-      return /\.(mp4|webm|ogg|mov)$/i.test(url);
+    // Detectar si es link de YouTube
+    function isYouTube(url: string) {
+      return /youtube\.com|youtu\.be/.test(url);
     }
 
-    const firstMedia = media[0];
-
-    if (isVideo(firstMedia)) {
-      mainContainer.innerHTML = `
-            <video id="main-media" class="w-full rounded-lg" controls>
-                <source src="${firstMedia}" type="video/mp4">
-                Tu navegador no soporta video.
-            </video>
-        `;
-    } else {
-      mainContainer.innerHTML = `
-            <img id="main-media" src="${firstMedia}" class="w-full rounded-lg" alt="Main Media">
-        `;
+    // Obtener ID de YouTube
+    function getYouTubeId(url: string) {
+      const regExp =
+        /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+      const match = url.match(regExp);
+      return match && match[1].length === 11 ? match[1] : null;
     }
 
-    container.innerHTML = "";
+    // Render principal
+    function renderMain(url: string) {
+      if (!mainContainer) return; // si no existe, salimos
 
-    media.forEach((mediaUrl, index) => {
-      if (isVideo(mediaUrl)) {
-        const thumb = document.createElement("video");
-        thumb.src = mediaUrl;
-        thumb.className =
-          "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
-        thumb.muted = true;
-        thumb.preload = "metadata";
-        container.appendChild(thumb);
+      if (isYouTube(url)) {
+        const ytId = getYouTubeId(url);
+        if (ytId) {
+          mainContainer.innerHTML = `
+        <lite-youtube videoid="${ytId}" class="w-full rounded-lg"></lite-youtube>
+      `;
+        }
       } else {
-        const thumb = document.createElement("img") as HTMLImageElement;
+        mainContainer.innerHTML = `
+      <img id="main-media" src="${url}" class="w-full rounded-lg" alt="Main Media">
+    `;
+      }
+    }
+
+    // Mostrar la primera entrada
+    const firstMedia = media[0];
+    renderMain(firstMedia);
+
+    // Render de thumbnails
+    container.innerHTML = "";
+    media.forEach((mediaUrl: string, index: string) => {
+      if (isYouTube(mediaUrl)) {
+        const ytId = getYouTubeId(mediaUrl);
+        if (ytId) {
+          const thumb = document.createElement("img");
+          thumb.src = `https://img.youtube.com/vi/${ytId}/0.jpg`;
+          thumb.className =
+            "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
+          thumb.alt = `YouTube Thumb ${index + 1}`;
+          thumb.dataset.ytid = ytId;
+          container.appendChild(thumb);
+        }
+      } else {
+        const thumb = document.createElement("img");
         thumb.src = mediaUrl;
         thumb.className =
           "thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80";
@@ -77,47 +95,30 @@ import Close from "./icons/Close.astro";
       }
     });
 
+    // Mostrar galería
     gallery.classList.remove("invisible");
     document.body.style.overflow = "hidden";
-  };
 
-  // Event listener para thumbnails
-  document.addEventListener("click", function (e) {
-    const target = e.target as HTMLElement;
+    // Evento para thumbnails
+    container.addEventListener("click", function (e: MouseEvent) {
+      const target = e.target as HTMLElement;
 
-    if (target?.classList?.contains("thumb")) {
-      const mainContainer = document.querySelector(
-        "#gallery .w-full.max-w-3xl"
-      );
-
-      if (mainContainer) {
-        if (target.tagName === "VIDEO") {
-          const videoSrc = (target as HTMLVideoElement).src;
-          mainContainer.innerHTML = `
-                    <video id="main-media" class="w-full rounded-lg" controls>
-                        <source src="${videoSrc}" type="video/mp4">
-                    </video>
-                `;
-        } else {
-          const imgSrc = (target as HTMLImageElement).src;
-          mainContainer.innerHTML = `
-                    <img id="main-media" src="${imgSrc}" class="w-full rounded-lg" alt="Main Media">
-                `;
+      if (target?.classList?.contains("thumb")) {
+        // Si es un thumbnail de YouTube
+        const ytId = target.dataset?.ytid;
+        if (ytId) {
+          renderMain(`https://www.youtube.com/watch?v=${ytId}`);
+        } else if ((target as HTMLImageElement).src) {
+          renderMain((target as HTMLImageElement).src);
         }
       }
-    }
-  });
+    });
+  };
 
-  // Gallery close
+  // Cerrar galería
   document
     .getElementById("closeGallery")
     ?.addEventListener("click", function () {
-      const video = document.querySelector<HTMLVideoElement>("#main-media");
-      if (video && video.tagName === "VIDEO") {
-        video.pause();
-        video.currentTime = 0; // opcional: reinicia al inicio
-      }
-
       document.getElementById("gallery")?.classList.add("invisible");
       document.body.style.overflow = "auto";
     });
