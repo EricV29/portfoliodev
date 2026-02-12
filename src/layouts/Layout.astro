@@ -5,33 +5,73 @@ import "@fontsource/belanosima/700.css";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
-const {description, title} = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logoTypira.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#FF83AD" />
+    <link rel="canonical" href={Astro.url} />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/og-image.jpg", Astro.url)} />
     <title>{title}</title>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.1/src/lite-yt-embed.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.1/src/lite-yt-embed.css"/>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.1/src/lite-yt-embed.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.1/src/lite-yt-embed.css"
+    />
   </head>
 
   <body>
-    <div class="absolute top-0 right-0 lg:w-[540px] md:w-[340px] w-[200px] lg:h-[540px] z-0 pointer-events-none">
+    <div
+      class="absolute top-0 right-0 lg:w-[540px] md:w-[340px] w-[200px] lg:h-[540px] z-0 pointer-events-none"
+    >
       <svg viewBox="0 175 400 500" class="w-full h-full">
-        <text style="letter-spacing:5px;" fill="#fff" font-size="80" fill-opacity="0.2" class="uppercase" transform="rotate(-90 270 270)">
-          <textPath href="#circlePath" startOffset="50%" text-anchor="middle" textLength="1600" lengthAdjust="spacingAndGlyphs">
+        <text
+          style="letter-spacing:5px;"
+          fill="#fff"
+          font-size="80"
+          fill-opacity="0.2"
+          class="uppercase"
+          transform="rotate(-90 270 270)"
+        >
+          <textPath
+            href="#circlePath"
+            startOffset="50%"
+            text-anchor="middle"
+            textLength="1600"
+            lengthAdjust="spacingAndGlyphs"
+          >
             #OPEN TO WORK #OPEN TO WORK
           </textPath>
-          <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="360 270 270" to="0 270 270" dur="40s" repeatCount="indefinite"/>
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="360 270 270"
+            to="0 270 270"
+            dur="40s"
+            repeatCount="indefinite"></animateTransform>
         </text>
         <defs>
-          <path id="circlePath" d="M260,260 m260,0 a260,260 0 1,0 -520,0 a260,260 0 1,0 520,0" />
+          <path
+            id="circlePath"
+            d="M260,260 m260,0 a260,260 0 1,0 -520,0 a260,260 0 1,0 520,0"
+          ></path>
         </defs>
       </svg>
     </div>
@@ -39,30 +79,3 @@ const {description, title} = Astro.props
     <slot />
   </body>
 </html>
-
-<style>
-  :root {
-    color-scheme: light dark;
-  }
-
-  html {
-    font-family: "Belanosima", sans-serif;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background-color: #1d1d1d;
-    justify-content: center;
-    min-height: 100vh;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 80px;
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  @media (min-width: 768px) {
-  body {
-    padding-top: 100px;
-  }
-</style>

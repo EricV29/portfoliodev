@@ -1,0 +1,16 @@
+{
+  "name": "Eric | Ingeniero de Software",
+  "short_name": "Eric",
+  "description": "Portafolio profesional de desarrollo web",
+  "icons": [
+    {
+      "src": "/logoTypira.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#FF83AD",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
