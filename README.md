@@ -1,46 +1,38 @@
-# Astro Starter Kit: Basics
+<div align="center">
+<h1 align="center">Hi, Coders! I am <a href="https://ericvilleda.netlify.app/">Eric</a> 🧑‍💻</h1>
+</div>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<img src="https://i.imgur.com/VvkdEvZ.png">
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eric-villeda-reyes-584856281/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ericjared29@gmail.com)
+[![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/ericjared29)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EricV29)
 
-## 🚀 Project Structure
+## About Me ✌
 
-Inside of your Astro project, you'll see the following folders and files:
+- 📱🖥️ I’ve recently learned how to create: **Desktop and web applications**
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- 🤓 I’m currently learning: **C# .NET**
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- 🤝 I’m eager to team up on: **Exciting open source initiatives**
+- 📜 Fun fact: **The first "bug" in history was a moth that caused a malfunction in the Harvard Mark II computer in 1947**
 
-## 🧞 Commands
+## Skills 🚀
 
-All commands are run from the root of the project, from a terminal:
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=javascript,typescript,python,cpp,cs,dotnet,html,nodejs,electron,react,astro,mysql,postgres,tailwind,git,supabase,docker,linux" />
+  </a>
+</p>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Projects </>
 
-## 👀 Want to learn more?
+## &nbsp;GitHub Analytics ⚙️
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<p align="center">
+<a href="https://github.com/EricV29">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=EricV29&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=EricV29&layout=compact&langs_count=8&theme=algolia"/>
+</a>
+</p>
