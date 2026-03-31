@@ -1,0 +1,125 @@
+---
+const { props } = Astro.props;
+import { Image } from "astro:assets";
+import imgCertBD from "../images/imgCertBD.webp";
+import imgCertPython from "../images/imgCertPython.webp";
+import imgGA1 from "../images/GA/imgGA1.webp";
+import imgGA2 from "../images/GA/imgGA2.webp";
+import imgC1 from "../images/Courier/imgC1.webp";
+import imgG1 from "../images/GetRoasted/imgG1.webp";
+import imgL1 from "../images/Linkify/imgL1.webp";
+
+const projectsMedia = {
+  projectGA: [imgGA1.src, imgGA2.src],
+  projectCourier: [imgC1.src, "https://youtu.be/diI36QvgYzM"],
+  projectGetRoasted: [imgG1.src, "https://youtu.be/fMuDNrkS3NQ"],
+  projectLinkify: [imgL1.src, "https://www.youtube.com/watch?v=3F_bSRJRXCM"],
+  certBD: [imgCertBD.src],
+  certPython: [imgCertPython.src],
+};
+---
+
+<section id="formation" class="w-full md:space-y-20 space-y-10 scroll-mt-20">
+  <div
+    class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
+  >
+    <span
+      class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+    >
+      FORMACIÓN
+    </span>
+    <p class="z-10 font-semibold">
+      Mi <span class="text-[#1DFF52]">formación</span>
+    </p>
+  </div>
+
+  <div class="w-full space-y-5 flex flex-col justify-start items-center">
+    <div class="flex justify-start items-center md:space-x-7 space-x-4">
+      <span
+        class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-3 ring-1 ring-[#1DFF52] bg-[#000]"
+      >
+      </span>
+
+      <div class="flex justify-center items-start">
+        <div
+          class="lg:w-2xl items-end lg:text-2xl md:text-[20px] text-[10px] text-[#1DFF52]"
+        >
+          <p>Licenciatura en Ingeniería de Software.</p>
+          <p class="text-white">Universidad Autónoma del Estado de Hidalgo.</p>
+        </div>
+        <p class="lg:w-55 text-end md:text-base text-[10px]">
+          Agosto 2020 - Noviembre 2024
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-start items-center md:space-x-7 space-x-4">
+      <span
+        class="flex items-center justify-center md:w-6 w-2 md:h-6 h-2 rounded-full -start-3 md:ring-3 ring-1 ring-[#1DFF52] bg-[#000]"
+      >
+      </span>
+
+      <div class="flex justify-center items-start">
+        <div
+          class="lg:w-2xl items-end lg:text-2xl md:text-[20px] text-[10px] text-[#1DFF52]"
+        >
+          <p>Bachillerato con especialidad en programación.</p>
+          <p class="text-white">
+            Centro de Estudios Tecnológicos industrial y de servicios <br
+              class="hidden md:inline"
+            />No. 26.
+          </p>
+        </div>
+        <p class="lg:w-55 text-end md:text-base text-[10px]">
+          Agosto 2017 - Julio 2020
+        </p>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center">
+      <div
+        class="w-5xl flex overflow-x-auto snap-x snap-mandatory space-x-4 p-4"
+      >
+        <div
+          class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 card"
+        >
+          <button
+            onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.certBD)})`}
+            class="w-full h-full"
+          >
+            <Image
+              src={imgCertBD}
+              alt="certificateDB"
+              class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1 btnsa"
+            />
+          </button>
+          <p
+            class="absolute w-full h-25 bottom-0 z-2 text-[20px] p-4 bg-black/50 backdrop-blur-sm rounded-b-3xl"
+          >
+            Diseño efectivo de una base de datos.
+          </p>
+        </div>
+
+        <div
+          class="w-75 h-75 snap-center flex-shrink-0 bg-[#111] rounded-3xl flex items-center justify-center text-white p-3 relative z-0 card"
+        >
+          <button
+            onclick={`window.loadGalleryImages(${JSON.stringify(projectsMedia.certPython)})`}
+            class="w-full h-full"
+          >
+            <Image
+              src={imgCertPython}
+              alt="imgCertPython"
+              class="w-full h-full rounded-2xl object-cover bg-[#707070] z-1 btnsa"
+            />
+          </button>
+          <p
+            class="absolute w-full h-25 bottom-0 z-2 text-[20px] p-4 bg-black/50 backdrop-blur-sm rounded-b-3xl"
+          >
+            Python Essentials 1.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

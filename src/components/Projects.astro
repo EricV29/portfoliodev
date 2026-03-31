@@ -1,0 +1,217 @@
+---
+import Github from "../components/icons/Github.astro";
+import Play from "../components/icons/Play.astro";
+import Link from "../components/icons/Link.astro";
+import Imagei from "../components/icons/Imagei.astro";
+import { Image } from "astro:assets";
+import Gallery from "../components/Gallery.astro";
+import imgGA1 from "../images/GA/imgGA1.webp";
+import imgGA2 from "../images/GA/imgGA2.webp";
+import imgGA3 from "../images/GA/imgGA3.webp";
+import imgGA4 from "../images/GA/imgGA4.webp";
+import imgGA5 from "../images/GA/imgGA5.webp";
+import imgC1 from "../images/Courier/imgC1.webp";
+import imgG1 from "../images/GetRoasted/imgG1.webp";
+import imgM1 from "../images/Manzania/imgM1.webp";
+import imgIEEE1 from "../images/IEEE/imgIEEE1.webp";
+import imgL1 from "../images/Linkify/imgL1.webp";
+import imgJW1 from "../images/JW/imgJW1.webp";
+import imgJW2 from "../images/JW/imgJW2.webp";
+import imgF1 from "../images/FidePOS/imgF1.webp";
+
+const projectsMedia = {
+  projectGA: [imgGA1.src, imgGA2.src, imgGA3.src, imgGA4.src, imgGA5.src],
+  projectCourier: [imgC1.src, "https://youtu.be/diI36QvgYzM"],
+  projectGetRoasted: [imgG1.src, "https://youtu.be/fMuDNrkS3NQ"],
+  projectLinkify: [imgL1.src, "https://www.youtube.com/watch?v=3F_bSRJRXCM"],
+  projectJotadobleu: [imgJW1.src, imgJW2.src],
+  projectFidePOS: [imgF1.src, "https://www.youtube.com/watch?v=06rHLejczJE"],
+};
+
+const PROJECTS = [
+  {
+    title: "FidePOS",
+    description:
+      "Aplicación de escritorio de punto de venta para PyMEs. Permite gestionar ventas, inventario, ingresos y pérdidas con reportes claros y en tiempo real, ayudando a mejorar la eficiencia y el control financiero del negocio.",
+    image: imgF1,
+    tags: ["React", "Electron", "TypeScript", "Tailwind", "SQLite"],
+    github: "https://github.com/EricV29/fidePOS.git",
+    link: "https://fidepos.netlify.app/",
+    media: projectsMedia.projectFidePOS,
+    type: "mixed",
+  },
+  {
+    title: "Jotadobleu",
+    description:
+      "Sitio web de negocio local, diseñado para centralizar información sobre productos, ofertas, ubicación y contacto.",
+    image: imgJW1,
+    tags: ["React", "Tailwind", "TypeScript", "Supabase", "Cloudinary"],
+    link: "https://jotadobleu.netlify.app/",
+    media: projectsMedia.projectJotadobleu,
+    type: "link",
+  },
+  {
+    title: "Gestión automotriz",
+    description:
+      "Plataforma web para refaccionarias que organiza clientes, autos y productos afiliados, facilita la comunicación con los clientes mediante chat y estados de servicio.",
+    image: imgGA1,
+    tags: ["TypeScript", "Tailwind", "React", "PostgreSQL"],
+    media: projectsMedia.projectGA,
+    type: "gallery",
+  },
+  {
+    title: "IEEE - ESTL STUDENT BRANCH",
+    description:
+      "Sitio web de la rama estudiantil de la IEEE para ESTL sección México, diseñada para centralizar información sobre eventos y proyectos.",
+    image: imgIEEE1,
+    tags: ["Astro", "Tailwind"],
+    link: "https://ieee-estl.com/",
+    type: "link",
+  },
+  {
+    title: "Linkify",
+    description:
+      "Sistema de gestión escolar que administra préstamos de equipos como Lego Spike, Arduino, Raspberry Pi y libros de la biblioteca.",
+    image: imgL1,
+    tags: ["Electron", "JavaScript", "Tailwind", "MySQL"],
+    github: "https://github.com/EricV29/Linkify",
+    media: projectsMedia.projectLinkify,
+    type: "mixed",
+  },
+  {
+    title: "Courier",
+    description:
+      "Plataforma web para PyMEs que centraliza la comunicación con clientes mediante tickets, gestión de usuarios y documentos.",
+    image: imgC1,
+    tags: ["PHP", "JavaScript", "CSS", "MySQL"],
+    media: projectsMedia.projectCourier,
+    type: "video",
+  },
+  {
+    title: "GetRoasted",
+    description:
+      "Sistema de punto de venta a medida para un restaurante que gestiona ventas, mesas, productos y proveedores.",
+    image: imgG1,
+    tags: ["C#", "WPF", "XAML Styles", "MySQL"],
+    media: projectsMedia.projectGetRoasted,
+    type: "video",
+  },
+  {
+    title: "Manzania",
+    description:
+      "Juego de aventura donde controlas a Malus, exploras tres mundos llenos de manzanas y enfrentas enemigos.",
+    image: imgM1,
+    tags: ["Unity", "C#", "Blender"],
+    github: "https://github.com/EricV29/Manzania",
+    link: "https://play.unity.com/en/games/f5e7d3a4-767f-4324-8722-f4179faf3c7a/manzania",
+    type: "mixed",
+  },
+];
+---
+
+<section
+  id="projects"
+  class="w-full md:space-y-20 space-y-10 scroll-mt-20 px-4"
+>
+  <div
+    class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center"
+  >
+    <span
+      class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none"
+    >
+      PROYECTOS
+    </span>
+    <p class="z-10 font-semibold text-white">
+      Mis <span class="text-[#1DFF52]">Proyectos</span>
+    </p>
+  </div>
+
+  <Gallery />
+
+  <div
+    class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 pb-8 no-scrollbar
+           md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-10 md:px-0 md:justify-items-center"
+  >
+    {
+      PROJECTS.map((project) => (
+        <article class="min-w-[85%] sm:min-w-[350px] snap-center md:min-w-0 md:w-full md:max-w-[400px] bg-[#111] p-4 rounded-[20px] space-y-4 border-l border-t border-white/50 cardp flex flex-col transition-transform">
+          <Image
+            src={project.image}
+            alt={project.title}
+            class="w-full h-[200px] md:h-[250px] object-cover rounded-2xl bg-[#1d1d1d]"
+          />
+
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="text-lg md:text-xl font-bold text-white leading-tight">
+              {project.title}
+            </h3>
+
+            <div class="flex gap-2 shrink-0">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  class="flex justify-center items-center relative btnsa size-10 md:size-12"
+                  aria-label="Github"
+                >
+                  <div class="btns size-full" />
+                  <span class="absolute w-5 md:w-6">
+                    <Github />
+                  </span>
+                </a>
+              )}
+
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  class="flex justify-center items-center relative btnsa size-10 md:size-12"
+                  aria-label="Link"
+                >
+                  <div class="btns size-full" />
+                  <span class="absolute w-5 md:w-6">
+                    <Link />
+                  </span>
+                </a>
+              )}
+
+              {project.media && (
+                <button
+                  onclick={`window.loadGalleryImages(${JSON.stringify(project.media)})`}
+                  class="flex justify-center items-center relative cursor-pointer btnsa size-10 md:size-12"
+                >
+                  <div class="btns size-full" />
+                  <span class="absolute w-5 md:w-6">
+                    {project.type === "gallery" ? <Imagei /> : <Play />}
+                  </span>
+                </button>
+              )}
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span class="bg-gray-800 text-[#1DFF52] text-[10px] md:text-xs font-medium px-2.5 py-0.5 rounded border border-[#1DFF52]/30">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <p class="text-gray-300 text-sm md:text-base font-normal leading-relaxed grow">
+            {project.description}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</section>

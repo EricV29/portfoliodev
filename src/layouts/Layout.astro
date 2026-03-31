@@ -2,7 +2,8 @@
 import "@fontsource/belanosima/400.css";
 import "@fontsource/belanosima/600.css";
 import "@fontsource/belanosima/700.css";
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import OpenToWorkBadge from "../components/OpenToWorkBadge.astro";
 import "../styles/global.css";
 
 const { description, title } = Astro.props;
@@ -25,6 +26,7 @@ const { description, title } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL("/og-image.jpg", Astro.url)} />
+    <meta name="color-scheme" content="light" />
     <title>{title}</title>
     <script
       type="module"
@@ -37,45 +39,8 @@ const { description, title } = Astro.props;
   </head>
 
   <body>
-    <div
-      class="absolute top-0 right-0 lg:w-[540px] md:w-[340px] w-[200px] lg:h-[540px] z-0 pointer-events-none"
-    >
-      <svg viewBox="0 175 400 500" class="w-full h-full">
-        <text
-          style="letter-spacing:5px;"
-          fill="#fff"
-          font-size="80"
-          fill-opacity="0.2"
-          class="uppercase"
-          transform="rotate(-90 270 270)"
-        >
-          <textPath
-            href="#circlePath"
-            startOffset="50%"
-            text-anchor="middle"
-            textLength="1600"
-            lengthAdjust="spacingAndGlyphs"
-          >
-            #OPEN TO WORK #OPEN TO WORK
-          </textPath>
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="360 270 270"
-            to="0 270 270"
-            dur="40s"
-            repeatCount="indefinite"></animateTransform>
-        </text>
-        <defs>
-          <path
-            id="circlePath"
-            d="M260,260 m260,0 a260,260 0 1,0 -520,0 a260,260 0 1,0 520,0"
-          ></path>
-        </defs>
-      </svg>
-    </div>
-    <Header />
+    <OpenToWorkBadge />
+    <Navbar />
     <slot />
   </body>
 </html>
