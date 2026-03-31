@@ -1,0 +1,70 @@
+---
+const { props } = Astro.props;
+import Github from "../components/icons/Github.astro";
+import Gmail from "../components/icons/Gmail.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+---
+
+<section id="contact" class="w-full">
+  <div
+    class="w-full h-screen lg:p-5 p-2 flex justify-center items-center md:space-y-5 space-y-10"
+  >
+    <div
+      class="hidden lg:block w-full lg:h-full bg-[#1DFF52] lg:rounded-l-4xl opacity-50"
+    >
+    </div>
+    <div class="w-full 1/2 flex flex-col justify-center items-center space-y-3">
+      <p class="font-bold md:text-5xl text-2xl">Eric Jared Villeda Reyes</p>
+      <p class="text-[#1DFF52] md:text-[30px] text-[15px]">
+        Lic. Ing. Software
+      </p>
+      <div class="flex space-x-5">
+        <a
+          href="https://www.linkedin.com/in/eric-villeda-reyes-584856281/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="flex justify-center items-center relative btnsa"
+        >
+          <div class="btns md:size-[70px] size-[40px]"></div>
+          <span class="absolute md:w-9 w-5"><Linkedin /></span>
+        </a>
+        <a
+          href="mailto:ericjared29@gmail.com?subject=Contacto%20desde%20portafolio&body=Hola,%20me%20gustaría%20ponerme%20en%20contacto%20contigo%20para%20hablar%20sobre%20[tema]."
+          title="ericjared29@gmail.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="Gmail"
+          class="flex justify-center items-center btnsa"
+        >
+          <div class="btns md:size-[70px] size-[40px]"></div>
+          <span class="absolute md:w-9 w-5"><Gmail /></span>
+        </a>
+        <a
+          href="https://github.com/EricV29"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="flex justify-center items-center btnsa"
+        >
+          <div class="btns md:size-[70px] size-[40px]"></div>
+          <span class="absolute md:w-9 w-5"><Github /></span>
+        </a>
+        <a
+          href="https://www.instagram.com/jared29x/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          class="flex justify-center items-center btnsa"
+        >
+          <div class="btns md:size-[70px] size-[40px]"></div>
+          <span class="absolute md:w-9 w-5"><Instagram /></span>
+        </a>
+      </div>
+      <p class="md:text-[30px] text-[15px]">
+        <span class="text-[#1DFF52]">Adios</span>, gracias por la visita 👋
+      </p>
+    </div>
+  </div>
+</section>

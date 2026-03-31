@@ -1,0 +1,86 @@
+---
+import HomeIcon from "./icons/Home.astro";
+import CvIcon from "./icons/Cv.astro";
+import MenuIcon from "./icons/MenuIcon.astro";
+
+const NAV_LINKS = [
+  { name: "Experiencia", href: "#xp" },
+  { name: "Proyectos", href: "#projects" },
+  { name: "Formación", href: "#formation" },
+];
+---
+
+<header
+  class="fixed top-1 left-1/2 -translate-x-1/2 md:px-[25px] px-[10px] py-[10px] rounded-lg flex justify-between items-center w-11/12 z-30 bg-[#1d1d1dbb] backdrop-blur-sm"
+>
+  <div class="flex flex-row gap-x-2 md:gap-x-6">
+    <a href="#top" class="flex justify-center items-center relative btnsa">
+      <div class="btns w-[40px] h-[40px] md:w-[55px] md:h-[55px]"></div>
+      <span class="absolute"><HomeIcon /></span>
+    </a>
+
+    <a
+      href="./CV.pdf"
+      download
+      class="inline-flex justify-between items-center relative btnsa"
+    >
+      <div class="btns md:w-[150px] w-[40px] h-[40px] md:h-[55px]"></div>
+      <span
+        class="absolute inset-0 flex items-center justify-center md:space-x-2"
+      >
+        <CvIcon />
+        <span class="hidden md:inline text-white">Descargar CV</span>
+      </span>
+    </a>
+  </div>
+
+  <button
+    id="menu-toggle"
+    aria-label="Abrir menú"
+    class="md:hidden text-white p-2 focus:outline-none"
+  >
+    <MenuIcon class="w-8 h-8" />
+  </button>
+
+  <nav
+    id="menu-items"
+    class="hidden absolute top-full mt-2 left-0 w-full bg-[#1d1d1df2] p-5 rounded-lg flex-col gap-y-6 items-center shadow-xl md:static md:flex md:flex-row md:w-auto md:bg-transparent md:p-0 md:mt-0 md:gap-x-8"
+  >
+    {
+      NAV_LINKS.map((link) => (
+        <a
+          href={link.href}
+          class="nav-link text-base md:text-sm font-medium text-white hover:text-[#1DFF52] transition-colors"
+        >
+          {link.name}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  // Seleccionamos los elementos necesarios
+  const btn = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu-items");
+  const links = document.querySelectorAll(".nav-link");
+
+  // Función para alternar el menú
+  const toggleMenu = () => {
+    menu?.classList.toggle("hidden");
+    menu?.classList.toggle("flex");
+  };
+
+  // Evento para el botón hamburguesa
+  btn?.addEventListener("click", toggleMenu);
+
+  // Evento para CERRAR el menú cuando se hace clic en cualquier enlace
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      // Solo ejecutamos el cierre si estamos en versión móvil (el menú no es estático)
+      if (!menu?.classList.contains("hidden")) {
+        toggleMenu();
+      }
+    });
+  });
+</script>

@@ -19,11 +19,21 @@ import Close from "./icons/Close.astro";
   </div>
 
   <div
-    class="grid grid-cols-4 max-w-3xl gap-4 p-5 lg:p-0"
+    class="flex overflow-x-auto snap-x snap-mandatory gap-4 w-full max-w-3xl p-5 lg:px-0 no-scrollbar"
     id="thumbnail-container"
   >
   </div>
 </div>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
 
 <script>
   (window as any).loadGalleryImages = function (media: any) {
