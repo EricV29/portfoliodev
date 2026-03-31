@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import imgQrofive from "../images/imgQrofive.webp";
+import imgLM from "../images/imgLM.webp";
+import imgTy from "../images/TypiraLogo.webp";
+
+const EXPERIENCES = [
+  {
+    company: "Desarrollador Web",
+    logo: imgTy,
+    role: "Ingeniero de Software Full-stack",
+    date: "2025 - Presente",
+    description: [
+      "Desarrollo de <span class='text-[#1DFF52]'>Landing Pages</span> y aplicaciones de escritorio con <span class='text-[#1DFF52]'>Electron</span>.",
+      "Arquitectura Full-stack moderna utilizando <span class='text-[#1DFF52]'>Astro, React y TypeScript</span> para interfaces rápidas y tipadas.",
+      "Diseño y despliegue de un <span class='text-[#1DFF52]'>Sistema de Punto de Venta (POS)</span> integral con gestión de inventarios y ventas.",
+      "Integración de servicios cloud como <span class='text-[#1DFF52]'>Supabase</span> (Base de datos) y <span class='text-[#1DFF52]'>Cloudinary</span> para gestión multimedia."
+    ],
+    isReverse: false
+  },
+  {
+    company: "Servicio \"Don Fer\"",
+    logo: imgLM,
+    role: "Freelance Full-stack",
+    date: "2024 - 2025",
+    description: [
+      "Diseño colaborativo y prototipado en <span class='text-[#1DFF52]'>Figma</span>.",
+      "Desarrollo Full-stack integral utilizando <span class='text-[#1DFF52]'>React, Node.js y Express</span>, estilizado con <span class='text-[#1DFF52]'>Tailwind CSS</span> y testeo con <span class='text-[#1DFF52]'>Playwright</span>.",
+      "Gestión de bases de datos relacionales en <span class='text-[#1DFF52]'>PostgreSQL</span> y administración de entornos de desarrollo y prueba mediante <span class='text-[#1DFF52]'>Docker</span>.",
+      "Administración de despliegue en servidor <span class='text-[#1DFF52]'>Linux</span> dentro de la nube de <span class='text-[#1DFF52]'>DigitalOcean</span>."
+    ],
+    isReverse: true
+  },
+  {
+    company: "QROFIVE",
+    logo: imgQrofive,
+    role: "Desarrollo Web (5SMART)",
+    date: "2023 - 2024",
+   description: [
+      "Diseño y desarrollo de módulos web e interfaces dinámicas con <span class='text-[#1DFF52]'>C#, .Net y JavaScript</span>, aplicando el patrón <span class='text-[#1DFF52]'>MVC</span> y librerías <span class='text-[#1DFF52]'>DevExpress</span>.",
+      "Gestión y optimización de bases de datos en <span class='text-[#1DFF52]'>SQL Server</span>, implementando operaciones CRUD y conexiones eficientes entre datos e interfaz.",
+      "Implementación de control de versiones con <span class='text-[#1DFF52]'>Git</span> y colaboración activa en entornos de desarrollo ágiles para el cumplimiento de entregables."
+    ],
+    isReverse: false 
+  },
+];
+---
+
+<section id="xp" class="w-full md:space-y-20 space-y-10 scroll-mt-20">
+  <!-- TÍTULO SECCIÓN -->
+  <div class="w-full h-10 md:h-20 md:text-5xl text-2xl relative text-center flex justify-center items-center">
+    <span class="absolute z-0 text-[3rem] md:text-[7rem] font-semibold text-gray-200 opacity-10 leading-none select-none uppercase">
+      Experiencia
+    </span>
+    <p class="z-10 font-semibold text-white">
+      Mi <span class="text-[#1DFF52]">Experiencia</span>
+    </p>
+  </div>
+
+  <!-- CONTENEDOR DINÁMICO -->
+  <div class="relative max-w-6xl mx-auto px-4">
+    <!-- Línea central -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#1DFF52] to-transparent hidden md:block"></div>
+
+    {EXPERIENCES.map((xp) => (
+      <div class="relative mb-20 md:mb-32">
+        <!-- Punto en el timeline -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-[#1DFF52] rounded-full border-4 border-[#000] z-20 hidden md:block mt-10"></div>
+
+        <div class={`flex flex-col md:flex-row items-center justify-between ${xp.isReverse ? 'md:flex-row-reverse' : ''}`}>
+          
+          <!-- LADO DEL LOGO Y EMPRESA -->
+          <div class={`md:w-[45%] flex flex-col items-center space-y-4 ${xp.isReverse ? 'md:items-start text-center md:text-left' : 'md:items-end text-center md:text-right'}`}>
+            <Image src={xp.logo} alt={xp.company} class="h-14 md:h-20 w-auto object-contain" />
+            <div class={`flex flex-col ${xp.isReverse ? 'md:items-start' : 'md:items-end'}`}>
+            <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-tight leading-none">
+                {xp.company}
+            </h3>
+            <span class="mt-2 px-3 py-1 border border-[#1DFF52]/30 text-[#1DFF52] font-mono text-xs rounded-full bg-[#1DFF52]/5">
+                {xp.date}
+            </span>
+            </div>
+          </div>
+
+          <!-- LADO DE LA DESCRIPCIÓN -->
+          <div class="md:w-[45%] mt-8 md:mt-0">
+            <div class={`flex items-center mb-4 ${xp.isReverse ? 'md:justify-end' : 'md:justify-start'}`}>
+            <div class={`
+                border-l-4 border-[#1DFF52] bg-[#1DFF52]/10 px-4 py-2 
+                text-[#1DFF52] font-bold text-lg md:text-xl
+                ${xp.isReverse ? 'md:border-l-0 md:border-r-4 md:text-right' : 'md:text-left'}
+            `}>
+                {xp.role}
+            </div>
+            </div>
+            <ul class={`text-gray-300 space-y-3 text-sm md:text-base list-none ${xp.isReverse ? 'text-center md:text-right' : 'text-center md:text-left'}`}>
+              {xp.description.map((item) => (
+                <li class={`${xp.isReverse ? 'md:border-r-2 md:pr-4 pr-0' : 'md:border-l-2 md:pl-4 pl-0'} border-[#1DFF52]`} set:html={item} />
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
