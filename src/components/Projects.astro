@@ -18,6 +18,14 @@ import imgL1 from "../images/Linkify/imgL1.webp";
 import imgJW1 from "../images/JW/imgJW1.webp";
 import imgJW2 from "../images/JW/imgJW2.webp";
 import imgF1 from "../images/FidePOS/imgF1.webp";
+import imgT1 from "../images/Tlahuelilpan/imgT1.webp";
+import imgT2 from "../images/Tlahuelilpan/imgT2.webp";
+import imgT3 from "../images/Tlahuelilpan/imgT3.webp";
+import imgT4 from "../images/Tlahuelilpan/imgT4.webp";
+import imgB1 from "../images/Boutique/imgB1.webp";
+import imgB2 from "../images/Boutique/imgB2.webp";
+import imgB3 from "../images/Boutique/imgB3.webp";
+import imgB4 from "../images/Boutique/imgB4.webp";
 
 const projectsMedia = {
   projectGA: [imgGA1.src, imgGA2.src, imgGA3.src, imgGA4.src, imgGA5.src],
@@ -26,9 +34,48 @@ const projectsMedia = {
   projectLinkify: [imgL1.src, "https://www.youtube.com/watch?v=3F_bSRJRXCM"],
   projectJotadobleu: [imgJW1.src, imgJW2.src],
   projectFidePOS: [imgF1.src, "https://www.youtube.com/watch?v=06rHLejczJE"],
+  projectTlahueWeb: [imgT1.src, imgT2.src, imgT3.src, imgT4.src],
+  projectBoutique: [imgB1.src, imgB2.src, imgB3.src, imgB4.src],
 };
 
 const PROJECTS = [
+  {
+    title: "Boutique",
+    description:
+      "Sitio web para una boutique de vestidos, diseñado para destacar la identidad del negocio, facilitar la ubicación de la sucursal y optimizar los canales de contacto directo con los clientes",
+    image: imgB1,
+    tags: [
+      "React",
+      "Express",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "DrizzleORM",
+    ],
+    link: "https://bellabellaboutique.netlify.app/",
+    media: projectsMedia.projectBoutique,
+    type: "gallery",
+  },
+  {
+    title: "Tlahuelilpan Web",
+    description:
+      "Plataforma digital para el municipio de Tlahuelilpan, enfocada en la difusión de novedades municipales, información del municipio y experiencia interactiva mediante un mapa con monumentos 3D.",
+    image: imgT1,
+    tags: [
+      "React",
+      "Express",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "Mapbox",
+      "Threejs",
+      "GSAP",
+    ],
+    github: "https://github.com/EricV29/tlahue-web.git",
+    link: "https://tlahuelilpan.netlify.app/",
+    media: projectsMedia.projectTlahueWeb,
+    type: "gallery",
+  },
   {
     title: "FidePOS",
     description:
@@ -129,7 +176,7 @@ const PROJECTS = [
 
   <div
     class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 pb-8 no-scrollbar
-           md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-10 md:px-0 md:justify-items-center"
+           md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-10 md:px-0 md:justify-items-center py-5"
   >
     {
       PROJECTS.map((project) => (
@@ -140,7 +187,7 @@ const PROJECTS = [
             class="w-full h-[200px] md:h-[250px] object-cover rounded-2xl bg-[#1d1d1d]"
           />
 
-          <div class="flex justify-between items-center gap-2">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-2">
             <h3 class="text-lg md:text-xl font-bold text-white leading-tight">
               {project.title}
             </h3>
@@ -150,7 +197,7 @@ const PROJECTS = [
                 <a
                   href={project.github}
                   target="_blank"
-                  class="flex justify-center items-center relative btnsa size-10 md:size-12"
+                  class="flex justify-center items-center relative btnsa size-9 md:size-12"
                   aria-label="Github"
                 >
                   <div class="btns size-full" />
