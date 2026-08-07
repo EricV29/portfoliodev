@@ -11,25 +11,25 @@ const NAV_LINKS = [
 ---
 
 <header
-  class="fixed top-1 left-1/2 -translate-x-1/2 md:px-[25px] px-[10px] py-[10px] rounded-lg flex justify-between items-center w-11/12 z-30 bg-[#1d1d1dbb] backdrop-blur-sm"
+  class="fixed top-0 left-0 md:px-[30px] px-[10px] py-[15px] flex justify-between items-center w-full z-30 bg-[#1d1d1dbb] backdrop-blur-sm"
 >
   <div class="flex flex-row gap-x-2 md:gap-x-6">
     <a href="#top" class="flex justify-center items-center relative btnsa">
-      <div class="btns w-[40px] h-[40px] md:w-[55px] md:h-[55px]"></div>
-      <span class="absolute"><HomeIcon /></span>
+      <div class="btns w-[30px] h-[30px] md:w-[45px] md:h-[45px]"></div>
+      <span class="absolute"><HomeIcon class="size-5" /></span>
     </a>
 
     <a
-      href="./CV.pdf"
+      href="./ERICVILLEDAREYESCV.pdf"
       download
       class="inline-flex justify-between items-center relative btnsa"
     >
-      <div class="btns md:w-[150px] w-[40px] h-[40px] md:h-[55px]"></div>
+      <div class="btns md:w-[150px] w-[40px] h-[30px] md:h-[45px]"></div>
       <span
-        class="absolute inset-0 flex items-center justify-center md:space-x-2"
+        class="absolute inset-0 flex items-center hover:text-[#1dff52] justify-center md:space-x-2"
       >
-        <CvIcon />
-        <span class="hidden md:inline text-white">Descargar CV</span>
+        <CvIcon class="size-5" />
+        <span class="hidden md:inline">Descargar CV</span>
       </span>
     </a>
   </div>

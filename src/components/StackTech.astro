@@ -20,6 +20,13 @@ import Sqlserver from "../components/icons/Sqlserver.astro";
 import Tailwind from "../components/icons/Tailwind.astro";
 import Typescript from "../components/icons/Typescript.astro";
 import Unity from "../components/icons/Unity.astro";
+import Three from "../components/icons/Threejs.astro";
+import Express from "../components/icons/Express.astro";
+import Supabase from "../components/icons/Supabase.astro";
+import Sqlite from "../components/icons/Sqlite.astro";
+import Cloudinary from "../components/icons/Cloudinary.astro";
+import Mapbox from "../components/icons/Mapbox.astro";
+import GCloud from "../components/icons/GCloud.astro";
 ---
 
 <section id="stacktec" class="w-full space-y-10">
@@ -32,59 +39,63 @@ import Unity from "../components/icons/Unity.astro";
       STACK TEC
     </span>
     <p class="z-10 font-semibold">
-      Mi <span class="text-[#1DFF52]">stack</span> tecnológico incluye:
+      Mi <span class="text-[#1DFF52]">stack</span> tecnológico
     </p>
   </div>
 
   <div class="w-full h-auto px-5 flex flex-wrap justify-center md:gap-5 gap-3">
     <div
-      class="w-auto md:min-h-45 h-auto bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Front-End</p>
       <div
         class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
       >
         <div class="flex flex-col justify-center items-center w-auto">
-          <Html class="md:w-13 w-5" />
+          <Html class="md:w-9 w-5" />
           <p>HTML</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Css class="md:w-13 w-5" />
+          <Css class="md:w-9 w-5" />
           <p>CSS</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Js class="md:w-13 w-5" />
+          <Js class="md:w-9 w-5" />
           <p>JavaScript</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Typescript class="md:w-13 w-5" />
+          <Typescript class="md:w-9 w-5" />
           <p>TypeScript</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <React class="md:w-13 w-5" />
+          <React class="md:w-9 w-5" />
           <p>ReactJS</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <AstroIcon class="md:w-13 w-5" />
+          <AstroIcon class="md:w-9 w-5" />
           <p>Astro</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Electron class="md:w-13 w-5" />
+          <Electron class="md:w-9 w-5" />
           <p>Electron</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Tailwind class="md:w-13 w-5" />
+          <Tailwind class="md:w-9 w-5" />
           <p>Tailwind</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Devexpress class="md:w-13 w-5" />
+          <Devexpress class="md:w-9 w-5" />
           <p>DevExpress</p>
+        </div>
+        <div class="flex flex-col justify-center items-center w-auto">
+          <Three class="md:w-9 w-5" />
+          <p>Treejs</p>
         </div>
       </div>
     </div>
 
     <div
-      class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Back-End</p>
       <div
@@ -93,124 +104,150 @@ import Unity from "../components/icons/Unity.astro";
         <div
           class="flex flex-col justify-center items-center w-auto text-center"
         >
-          <Nodejs class="md:w-13 w-5" />
+          <Nodejs class="md:w-9 w-5" />
           <p>NodeJS</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Csharp class="md:w-13 w-5" />
+          <Csharp class="md:w-9 w-5" />
           <p>CSharp</p>
+        </div>
+        <div class="flex flex-col justify-center items-center w-auto">
+          <Express class="md:w-9 w-5" />
+          <p>Express</p>
         </div>
       </div>
     </div>
 
     <div
-      class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Bases de Datos</p>
       <div
         class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
       >
         <div class="flex flex-col items-center text-center w-auto">
-          <Mysql class="md:w-13 w-5" />
+          <Mysql class="md:w-9 w-5" />
           <p>MySQL</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Sqlserver class="md:w-13 w-5" />
+          <Sqlserver class="md:w-9 w-5" />
           <p>SQL Server</p>
         </div>
         <div class="flex flex-col justify-center items-center w-auto">
-          <Postgresql class="md:w-13 w-5" />
+          <Postgresql class="md:w-9 w-5" />
           <p>PostgreSQL</p>
+        </div>
+        <div class="flex flex-col justify-center items-center w-auto">
+          <Supabase class="md:w-9 w-5" />
+          <p>Supabase</p>
+        </div>
+        <div class="flex flex-col justify-center items-center w-auto">
+          <Sqlite class="md:w-9 w-5" />
+          <p>Sqlite</p>
         </div>
       </div>
     </div>
 
     <div
-      class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Test</p>
       <div
         class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
       >
         <div class="flex flex-col items-center text-center w-auto">
-          <Playwright class="md:w-13 w-5" />
+          <Playwright class="md:w-9 w-5" />
           <p>Playwright</p>
         </div>
       </div>
     </div>
 
     <div
-      class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Herramientas</p>
       <div
         class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
       >
         <div class="flex flex-col items-center w-auto text-center">
-          <Git class="md:w-13 w-5" />
+          <Git class="md:w-9 w-5" />
           <p>Git</p>
         </div>
         <div class="flex flex-col items-center w-auto text-center">
-          <Unity class="md:w-13 w-5" />
+          <Unity class="md:w-9 w-5" />
           <p>Unity</p>
         </div>
         <div class="flex flex-col items-center w-auto text-center">
-          <Figma class="md:w-13 w-5" />
+          <Figma class="md:w-9 w-5" />
           <p>Figma</p>
+        </div>
+        <div class="flex flex-col items-center w-auto text-center">
+          <Cloudinary class="md:w-9 w-5" />
+          <p>Cloudinary</p>
+        </div>
+        <div class="flex flex-col items-center w-auto text-center">
+          <Mapbox class="md:w-9 w-5" />
+          <p>Mapbox</p>
         </div>
       </div>
     </div>
 
     <div
-      class="w-auto md:min-h-45 bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 space-y-5"
+      class="w-auto md:h-[8rem] h-fit bg-[#111] rounded-3xl text-start md:px-10 px-5 md:py-4 py-2 flex flex-col gap-2"
     >
       <p class="text-[#1DFF52]">Aprendiendo</p>
       <div
         class="w-auto flex flex-wrap md:justify-start justify-center items-end gap-3"
       >
         <div class="flex flex-col items-center w-auto text-center">
-          <Python class="md:w-13 w-5" />
+          <Python class="md:w-9 w-5" />
           <p>Python</p>
         </div>
         <div class="flex flex-col items-center w-auto text-center">
-          <Docker class="md:w-13 w-5" />
+          <Docker class="md:w-9 w-5" />
           <p>Docker</p>
+        </div>
+        <div class="flex flex-col items-center w-auto text-center">
+          <GCloud class="md:w-9 w-5" />
+          <p>Google Cloud</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="w-full flex flex-wrap justify-center items-center gap-5">
+  <div
+    class="w-full flex flex-wrap justify-center items-center gap-5 text-sm md:text-xl"
+  >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Desarrollo Web</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Gestión de Bases de Datos</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Trabajo colaborativo</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Prototipado</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Adaptabilidad</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Creatividad</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Proactividad</span
     >
     <span
-      class="bg-green-100 text-[#1DFF52] md:text-2xl font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
+      class="bg-green-100 text-[#1DFF52] font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-[#1DFF52] border border-[#1DFF52]"
       >Autodidacta</span
     >
   </div>
