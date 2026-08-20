@@ -175,16 +175,16 @@ const PROJECTS = [
   <Gallery />
 
   <div
-    class="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 pb-8 no-scrollbar
-           md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-10 md:px-0 md:justify-items-center py-5"
+    class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 no-scrollbar
+           md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-10 md:px-0 md:justify-items-center md:py-5"
   >
     {
       PROJECTS.map((project) => (
-        <article class="min-w-[85%] sm:min-w-[350px] snap-center md:min-w-0 md:w-full md:max-w-[400px] bg-[#111] p-4 rounded-[20px] space-y-4 border-l border-t border-white/50 cardp flex flex-col transition-transform">
+        <article class="w-full shrink-0 snap-center md:max-w-[400px] bg-[#111] p-4 rounded-[20px] space-y-4 border-l border-t border-white/50 cardp flex flex-col transition-transform">
           <Image
             src={project.image}
             alt={project.title}
-            class="w-full h-[200px] md:h-[250px] object-cover rounded-2xl bg-[#1d1d1d]"
+            class="w-full h-[160px] md:h-[250px] object-cover rounded-2xl bg-[#1d1d1d]"
           />
 
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-2">
